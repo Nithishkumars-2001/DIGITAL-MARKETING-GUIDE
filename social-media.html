@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>React Interview Questions & Answers | Beginner to Advanced</title>
+
+    <meta name="description"
+        content="Prepare for React interviews with the latest React interview questions and answers. Covers beginner, intermediate, and advanced React concepts, hooks, components, state, props, and performance optimization." />
+
+    <meta name="keywords"
+        content="react interview questions, react js interview questions, react interview questions and answers, react hooks interview questions, react coding interview, frontend interview questions, javascript react interview" />
+
+    <meta name="author" content="React Interview Guide">
+    <meta name="robots" content="index, follow">
+
+    <!--My css-->
+    <link rel="stylesheet" href="asset/css/style.css">
+    <link rel="icon" href="assets/img/company-logo.png" type="image/png">
+
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+
+<body style="background-color: #323232;">
+
+    <!-- NavBar -->
+    <nav id="Navbar" class="navbar px-3 px-md-4 py-md-3">
+
+        <div class="website-name text-white">
+
+            <!-- Logo Icon -->
+            <div class="logo-img">
+                <i class="fa-solid fa-chart-line"></i> <!-- Digital Marketing icon -->
+            </div>
+
+            <!-- Website Title -->
+            <a href="index.html" style="text-decoration: none;">
+                <h2 class="logo-style ps-3">
+                    DIGITAL MARKETING GUIDE
+                </h2>
+            </a>
+
+        </div>
+
+        <!-- Menu Items -->
+        <div class="navbar-item">
+            <div class="navbar-menu pe-5">
+                <ul class="navbar-menu-links text-white">
+
+                    <a href="index.html">
+                        <li> Home </li>
+                    </a>
+
+                    <a href="seo.html">
+                        <li> SEO </li>
+                    </a>
+
+                    <a href="social-media.html">
+                        <li> Social Media Marketing </li>
+                    </a>
+
+                    <a href="email.html">
+                        <li> Email Marketing </li>
+                    </a>
+
+                    <a href="content.html">
+                        <li> Content Marketing </li>
+                    </a>
+
+                    <a href="tools.html">
+                        <li> Tools & Resources </li>
+                    </a>
+
+                </ul>
+            </div>
+        </div>
+
+        <!-- Mobile Toggle -->
+        <div class="navbar-menu-toggle" onclick="shownavbar()">
+            <i class="bi bi-list"></i>
+        </div>
+
+    </nav>
+
+    <!-- Side Navbar -->
+    <aside class="side-navbar">
+
+        <!-- Close Icon -->
+        <p class="cross-symbol" onclick="closenavbar()">
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </p>
+
+        <div class="side-navbar-links">
+
+            <!-- Home -->
+            <p class="side-navbar-link">
+                <i class="fas fa-home"></i>
+                <a href="index.html"> Home </a>
+            </p>
+
+            <!-- SEO -->
+            <p class="side-navbar-link">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <a href="seo.html"> SEO </a>
+            </p>
+
+            <!-- Social Media Marketing -->
+            <p class="side-navbar-link">
+                <i class="fa-brands fa-facebook"></i>
+                <a href="social-media.html"> Social Media Marketing </a>
+            </p>
+
+            <!-- Email Marketing -->
+            <p class="side-navbar-link">
+                <i class="fa-solid fa-envelope"></i>
+                <a href="email.html"> Email Marketing </a>
+            </p>
+
+            <!-- Content Marketing -->
+            <p class="side-navbar-link">
+                <i class="fa-solid fa-pen-nib"></i>
+                <a href="content.html"> Content Marketing </a>
+            </p>
+
+            <!-- Tools & Resources -->
+            <p class="side-navbar-link">
+                <i class="fa-solid fa-toolbox"></i>
+                <a href="tools.html"> Tools & Resources </a>
+            </p>
+
+        </div>
+
+    </aside>
+
+    <!-- Page Header -->
+    <section class="page-header px-3">
+        <div class="page-header-content">
+            <h4>Social Media Marketing</h4>
+            <h1>Complete Guide – Social Media Marketing Strategies & Tips</h1>
+        </div>
+    </section>
+
+    <!-- Question & Answer -->
+    <div class="react-interview-question">
+        <div class="container">
+
+            <h3 class="header-title">Social Media Marketing – Questions & Answers Guide</h3>
+
+            <!-- Question 101 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans101">
+                    <span class="question-number">101</span>
+                    <h2 class="question-text">What is Social Media Marketing (SMM)?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans101">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Social Media Marketing is the process of promoting a brand, product, or service on social
+                            media platforms.</li>
+                        <li>Helps businesses increase brand awareness, engagement, and website traffic.</li>
+                        <li>Common platforms include Facebook, Instagram, LinkedIn, Twitter, and TikTok.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 102 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans102">
+                    <span class="question-number">102</span>
+                    <h2 class="question-text">Why is Social Media Marketing important?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans102">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>It builds brand recognition and trust with your audience.</li>
+                        <li>Drives traffic to websites and increases sales opportunities.</li>
+                        <li>Enables businesses to engage directly with customers in real-time.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 103 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans103">
+                    <span class="question-number">103</span>
+                    <h2 class="question-text">What are the types of Social Media Marketing?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans103">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Organic Social Media Marketing – posting content without paid ads.</li>
+                        <li>Paid Social Media Marketing – using ads and sponsored posts.</li>
+                        <li>Influencer Marketing – collaborating with social media influencers.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 104 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans104">
+                    <span class="question-number">104</span>
+                    <h2 class="question-text">What is a Social Media Strategy?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans104">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>A social media strategy is a plan to achieve marketing goals using social media platforms.
+                        </li>
+                        <li>Includes audience research, content planning, posting schedule, and engagement tactics.</li>
+                        <li>Helps measure ROI and improve performance over time.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 105 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans105">
+                    <span class="question-number">105</span>
+                    <h2 class="question-text">What is Organic Reach?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans105">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Organic reach is the number of people who see your content without paid promotion.</li>
+                        <li>Depends on platform algorithms, engagement, and content quality.</li>
+                        <li>High organic reach reduces the need for paid advertising.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 106 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans106">
+                    <span class="question-number">106</span>
+                    <h2 class="question-text">What is Paid Social Media Marketing?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans106">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Paid SMM involves running ads or sponsored posts to reach a larger audience.</li>
+                        <li>Helps target specific demographics, interests, and behaviors.</li>
+                        <li>Provides measurable results and faster growth compared to organic methods.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 107 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans107">
+                    <span class="question-number">107</span>
+                    <h2 class="question-text">What is Engagement Rate?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans107">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Engagement rate measures how users interact with your content (likes, comments, shares).
+                        </li>
+                        <li>High engagement shows content resonates with the audience.</li>
+                        <li>Calculated as total interactions ÷ total reach × 100.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 108 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans108">
+                    <span class="question-number">108</span>
+                    <h2 class="question-text">What is Social Media Analytics?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans108">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Social media analytics tracks performance metrics of your content and campaigns.</li>
+                        <li>Common metrics: reach, impressions, clicks, conversions, and engagement rate.</li>
+                        <li>Helps improve strategy, content quality, and ROI.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 109 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans109">
+                    <span class="question-number">109</span>
+                    <h2 class="question-text">What is Influencer Marketing?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans109">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Influencer marketing involves partnering with popular social media personalities to promote
+                            your brand.</li>
+                        <li>Influencers have a loyal audience and can boost brand credibility.</li>
+                        <li>Effective for awareness, leads, and sales.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 110 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans110">
+                    <span class="question-number">110</span>
+                    <h2 class="question-text">What is a Social Media Content Calendar?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans110">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>A content calendar schedules social media posts in advance.</li>
+                        <li>Helps maintain consistent posting and manage campaigns effectively.</li>
+                        <li>Includes content type, caption, hashtags, publishing time, and platform.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 111 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans111">
+                    <span class="question-number">111</span>
+                    <h2 class="question-text">What is Hashtag Marketing?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans111">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Hashtag marketing uses specific hashtags to categorize content and increase visibility.</li>
+                        <li>Helps target audiences interested in specific topics or trends.</li>
+                        <li>Popular on Instagram, Twitter, and LinkedIn.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 112 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans112">
+                    <span class="question-number">112</span>
+                    <h2 class="question-text">What is Social Media ROI?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans112">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Social Media ROI measures the effectiveness of social media campaigns.</li>
+                        <li>Calculated as the value generated (leads, sales, or engagement) ÷ cost of campaigns.</li>
+                        <li>Helps businesses understand which strategies are profitable.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 113 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans113">
+                    <span class="question-number">113</span>
+                    <h2 class="question-text">What is Social Listening?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans113">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Social listening is monitoring social media channels for mentions, feedback, and trends.
+                        </li>
+                        <li>Helps understand audience opinions and improve marketing strategies.</li>
+                        <li>Tools like Hootsuite, Sprout Social, and Brandwatch are commonly used.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 114 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans114">
+                    <span class="question-number">114</span>
+                    <h2 class="question-text">What is a Social Media Audit?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans114">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>A social media audit evaluates your social media performance and presence.</li>
+                        <li>Analyzes metrics, content quality, engagement, and audience growth.</li>
+                        <li>Helps identify strengths, weaknesses, and opportunities to improve strategy.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 115 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans115">
+                    <span class="question-number">115</span>
+                    <h2 class="question-text">What is a Social Media Funnel?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans115">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>A social media funnel guides users from awareness to conversion through content and
+                            engagement.</li>
+                        <li>Stages include Awareness, Interest, Consideration, Conversion, and Retention.</li>
+                        <li>Helps turn followers into customers systematically.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 116 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans116">
+                    <span class="question-number">116</span>
+                    <h2 class="question-text">What is Content Curation?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans116">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Content curation is finding, organizing, and sharing relevant content from other sources.
+                        </li>
+                        <li>Helps provide value to your audience without creating everything from scratch.</li>
+                        <li>Boosts credibility and keeps social media accounts active.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 117 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans117">
+                    <span class="question-number">117</span>
+                    <h2 class="question-text">What is Social Media Engagement?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans117">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Engagement is how users interact with your social media content (likes, shares, comments).
+                        </li>
+                        <li>High engagement indicates strong audience interest and content relevance.</li>
+                        <li>Engagement rate is often measured to track performance.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 118 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans118">
+                    <span class="question-number">118</span>
+                    <h2 class="question-text">What is a Social Media Campaign?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans118">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>A campaign is a planned series of social media posts to achieve a specific goal.</li>
+                        <li>Goals can include brand awareness, lead generation, website traffic, or sales.</li>
+                        <li>Campaigns include content, hashtags, visuals, schedule, and performance tracking.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 119 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans119">
+                    <span class="question-number">119</span>
+                    <h2 class="question-text">What is Social Media Influencer?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans119">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>An influencer is a person with a large and engaged following on social media.</li>
+                        <li>They promote products, services, or content to their audience.</li>
+                        <li>Influencers help businesses gain credibility and reach new customers.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 120 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans120">
+                    <span class="question-number">120</span>
+                    <h2 class="question-text">What is Social Media Monitoring?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans120">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Social media monitoring is tracking mentions, comments, and conversations about your brand
+                            online.</li>
+                        <li>Helps respond to customer feedback, manage reputation, and identify trends.</li>
+                        <li>Tools like Mention, Brand24, and Sprout Social are commonly used.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 121 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans121">
+                    <span class="question-number">121</span>
+                    <h2 class="question-text">What is Social Media Advertising?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans121">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Social media advertising involves using paid ads to promote content, products, or services.
+                        </li>
+                        <li>Platforms like Facebook, Instagram, LinkedIn, and Twitter allow targeted ad campaigns.</li>
+                        <li>Helps reach a specific audience quickly and measure ROI accurately.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 122 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans122">
+                    <span class="question-number">122</span>
+                    <h2 class="question-text">What is Facebook Ads Manager?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans122">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Facebook Ads Manager is a tool to create, manage, and track Facebook and Instagram ads.</li>
+                        <li>Allows targeting by demographics, interests, behaviors, and location.</li>
+                        <li>Provides performance metrics like reach, clicks, conversions, and cost per result.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 123 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans123">
+                    <span class="question-number">123</span>
+                    <h2 class="question-text">What is Instagram Marketing?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans123">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Instagram marketing involves promoting your brand using posts, stories, reels, and ads.</li>
+                        <li>Focuses on visually appealing content to engage followers.</li>
+                        <li>Helps increase brand awareness, followers, and website traffic.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 124 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans124">
+                    <span class="question-number">124</span>
+                    <h2 class="question-text">What is TikTok Marketing?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans124">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>TikTok marketing uses short-form video content to promote products or services.</li>
+                        <li>Focuses on trends, challenges, and viral content to increase visibility.</li>
+                        <li>Helps brands engage younger audiences and build brand personality.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 125 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans125">
+                    <span class="question-number">125</span>
+                    <h2 class="question-text">What is LinkedIn Marketing?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans125">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>LinkedIn marketing targets professionals and B2B audiences.</li>
+                        <li>Includes posts, articles, sponsored content, and LinkedIn Ads.</li>
+                        <li>Helps generate leads, build authority, and recruit talent.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 126 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans126">
+                    <span class="question-number">126</span>
+                    <h2 class="question-text">What is Twitter Marketing?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans126">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Twitter marketing promotes brands via tweets, threads, and ads.</li>
+                        <li>Focuses on trending topics, hashtags, and real-time engagement.</li>
+                        <li>Helps increase brand visibility and customer interaction quickly.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 127 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans127">
+                    <span class="question-number">127</span>
+                    <h2 class="question-text">What is Social Media Targeting?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans127">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Social media targeting is selecting specific audience groups for ads and content.</li>
+                        <li>Can target by age, gender, location, interests, behaviors, and devices.</li>
+                        <li>Improves ad efficiency and ROI.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 128 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans128">
+                    <span class="question-number">128</span>
+                    <h2 class="question-text">What is Retargeting in Social Media?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans128">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Retargeting shows ads to users who have previously interacted with your website or content.
+                        </li>
+                        <li>Helps convert interested users into customers.</li>
+                        <li>Commonly used on Facebook, Instagram, and Google Ads.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 129 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans129">
+                    <span class="question-number">129</span>
+                    <h2 class="question-text">What are Social Media KPIs?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans129">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Key Performance Indicators (KPIs) measure the success of social media campaigns.</li>
+                        <li>Examples: reach, engagement, clicks, conversions, and follower growth.</li>
+                        <li>KPI tracking helps optimize content and strategy.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 130 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans130">
+                    <span class="question-number">130</span>
+                    <h2 class="question-text">What is User-Generated Content (UGC)?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans130">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>User-Generated Content is content created by your audience or customers about your brand.
+                        </li>
+                        <li>Includes reviews, photos, videos, testimonials, and social posts.</li>
+                        <li>UGC builds trust, authenticity, and engagement for your brand.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 131 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans131">
+                    <span class="question-number">131</span>
+                    <h2 class="question-text">What is Social Media Content Strategy?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans131">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>A social media content strategy is a plan for creating, publishing, and managing posts.</li>
+                        <li>Defines target audience, content types, posting frequency, and engagement goals.</li>
+                        <li>Helps improve brand consistency and campaign effectiveness.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 132 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans132">
+                    <span class="question-number">132</span>
+                    <h2 class="question-text">What is a Social Media Calendar?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans132">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>A social media calendar is a schedule of planned posts for all social platforms.</li>
+                        <li>Includes dates, times, content types, captions, and hashtags.</li>
+                        <li>Ensures consistent posting and organized campaigns.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 133 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans133">
+                    <span class="question-number">133</span>
+                    <h2 class="question-text">What is Social Media Branding?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans133">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Social media branding is creating a consistent visual and messaging identity online.</li>
+                        <li>Includes profile design, logo, colors, tone, and content style.</li>
+                        <li>Helps increase recognition and build trust with followers.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 134 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans134">
+                    <span class="question-number">134</span>
+                    <h2 class="question-text">What is Social Media Engagement Rate?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans134">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Engagement rate measures how actively followers interact with your content.</li>
+                        <li>Includes likes, comments, shares, clicks, and saves.</li>
+                        <li>Calculated as total interactions ÷ total followers × 100.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 135 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans135">
+                    <span class="question-number">135</span>
+                    <h2 class="question-text">What are Social Media Metrics?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans135">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Metrics are data points to measure social media performance.</li>
+                        <li>Examples: reach, impressions, clicks, engagement, conversions, and follower growth.</li>
+                        <li>Helps optimize strategy and content for better results.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 136 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans136">
+                    <span class="question-number">136</span>
+                    <h2 class="question-text">What is Social Media Analytics?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans136">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Social media analytics is the process of analyzing data from social platforms.</li>
+                        <li>Helps understand audience behavior, campaign performance, and ROI.</li>
+                        <li>Tools like Facebook Insights, Instagram Analytics, and Google Analytics are used.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 137 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans137">
+                    <span class="question-number">137</span>
+                    <h2 class="question-text">What is Social Media Monitoring?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans137">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Monitoring tracks mentions, comments, hashtags, and conversations about your brand online.
+                        </li>
+                        <li>Helps respond to customers, manage reputation, and identify trends early.</li>
+                        <li>Tools include Hootsuite, Sprout Social, and Brand24.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 138 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans138">
+                    <span class="question-number">138</span>
+                    <h2 class="question-text">What is Content Curation?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans138">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Content curation is collecting, organizing, and sharing high-quality content from other
+                            sources.</li>
+                        <li>Helps provide value to followers and maintain an active social presence.</li>
+                        <li>Supports brand authority and audience engagement.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 139 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans139">
+                    <span class="question-number">139</span>
+                    <h2 class="question-text">What are Social Media Goals?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans139">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Social media goals are specific objectives set for campaigns and content.</li>
+                        <li>Examples: increase followers, boost engagement, drive traffic, generate leads, or increase
+                            sales.</li>
+                        <li>Goals guide strategy, content planning, and performance measurement.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 140 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans140">
+                    <span class="question-number">140</span>
+                    <h2 class="question-text">What is Social Media Trend Analysis?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans140">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Trend analysis identifies popular topics, hashtags, and content formats in social media.
+                        </li>
+                        <li>Helps brands create relevant content and participate in trending conversations.</li>
+                        <li>Supports audience engagement and brand visibility.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 141 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans141">
+                    <span class="question-number">141</span>
+                    <h2 class="question-text">What is A/B Testing in Social Media?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans141">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>A/B testing compares two versions of a post, ad, or campaign to see which performs better.
+                        </li>
+                        <li>Tests elements like visuals, captions, call-to-action, or posting times.</li>
+                        <li>Helps improve engagement, conversions, and ROI.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 142 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans142">
+                    <span class="question-number">142</span>
+                    <h2 class="question-text">What is Paid Social Media Marketing?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans142">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Paid social media marketing uses ads to reach a larger and targeted audience.</li>
+                        <li>Platforms include Facebook, Instagram, LinkedIn, Twitter, and TikTok.</li>
+                        <li>Helps achieve faster results for brand awareness, lead generation, and conversions.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 143 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans143">
+                    <span class="question-number">143</span>
+                    <h2 class="question-text">What is Social Media Lead Generation?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans143">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Lead generation collects contact information from potential customers via social media.</li>
+                        <li>Can use forms, gated content, ads, or contests to capture leads.</li>
+                        <li>Helps build email lists and sales pipelines.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 144 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans144">
+                    <span class="question-number">144</span>
+                    <h2 class="question-text">What is Social Media Conversion Rate?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans144">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Conversion rate is the percentage of users who take a desired action from social media.</li>
+                        <li>Actions include making a purchase, signing up, or downloading content.</li>
+                        <li>Helps measure the effectiveness of campaigns and content strategy.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 145 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans145">
+                    <span class="question-number">145</span>
+                    <h2 class="question-text">What is Social Media Engagement Optimization?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans145">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Engagement optimization improves how users interact with your content.</li>
+                        <li>Includes posting at peak times, using interactive posts, and engaging visuals.</li>
+                        <li>Helps increase likes, comments, shares, and overall audience interaction.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 146 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans146">
+                    <span class="question-number">146</span>
+                    <h2 class="question-text">What is Social Media Retargeting?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans146">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Retargeting shows ads to users who previously visited your website or interacted with
+                            content.</li>
+                        <li>Increases chances of conversion by reminding users about your brand.</li>
+                        <li>Works on platforms like Facebook, Instagram, and Google Display Network.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 147 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans147">
+                    <span class="question-number">147</span>
+                    <h2 class="question-text">What is Social Media Ad Targeting?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans147">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Ad targeting selects the right audience for social media campaigns.</li>
+                        <li>Can target by age, gender, interests, behavior, location, and device.</li>
+                        <li>Improves ad relevance and ROI by reaching potential customers.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 148 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans148">
+                    <span class="question-number">148</span>
+                    <h2 class="question-text">What is Social Media Funnel Optimization?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans148">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Funnel optimization improves how users move from awareness to conversion.</li>
+                        <li>Includes improving content, calls-to-action, and retargeting strategies.</li>
+                        <li>Helps maximize conversions and reduce drop-offs at each stage.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 149 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans149">
+                    <span class="question-number">149</span>
+                    <h2 class="question-text">What is Social Media Audience Segmentation?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans149">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Audience segmentation divides followers into groups based on behavior, demographics, or
+                            interests.</li>
+                        <li>Helps deliver personalized content and ads to each segment.</li>
+                        <li>Improves engagement, relevance, and ROI of campaigns.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 150 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans150">
+                    <span class="question-number">150</span>
+                    <h2 class="question-text">What is Social Media Campaign Optimization?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans150">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Campaign optimization improves the effectiveness of social media ads and posts.</li>
+                        <li>Includes testing visuals, captions, targeting, and timing.</li>
+                        <li>Helps increase engagement, conversions, and overall ROI.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="loan-footer px-2">
+        <div class="container">
+            <div class="row">
+
+                <!-- About Digital Marketing -->
+                <div class="col-md-4 col-sm-12 mb-4">
+                    <h5 class="fw-bold">Digital Marketing Guide</h5>
+
+                    <p class="pe-0 pe-md-3">
+                        A complete beginner-friendly guide for Digital Marketing.
+                        Learn SEO, Social Media Marketing, Email Marketing,
+                        Content Strategy, Paid Ads, and more—all in one place.
+                        Clear explanations and practical tips to help you grow online.
+                    </p>
+                </div>
+
+                <!-- Digital Marketing Topics -->
+                <div class="col-md-2 col-6 mb-4">
+                    <h5 class="fw-bold">Topics</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">SEO Basics</a></li>
+                        <li><a href="#">Social Media Marketing</a></li>
+                        <li><a href="#">Email Marketing</a></li>
+                        <li><a href="#">Content Strategy</a></li>
+                        <li><a href="#">Paid Advertising</a></li>
+                    </ul>
+                </div>
+
+                <!-- Tools & Techniques -->
+                <div class="col-md-2 col-6 mb-4">
+                    <h5 class="fw-bold">Tools & Techniques</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Google Ads</a></li>
+                        <li><a href="#">Facebook Ads</a></li>
+                        <li><a href="#">Analytics Tools</a></li>
+                        <li><a href="#">SEO Tools</a></li>
+                        <li><a href="#">Email Automation</a></li>
+                    </ul>
+                </div>
+
+                <!-- Learning Resources -->
+                <div class="col-md-2 col-6 mb-4">
+                    <h5 class="fw-bold">Learning Resources</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Blogs & Articles</a></li>
+                        <li><a href="#">Video Tutorials</a></li>
+                        <li><a href="#">E-books & PDFs</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                        <li><a href="#">Webinars</a></li>
+                    </ul>
+                </div>
+
+                <!-- Strategy & Tips -->
+                <div class="col-md-2 col-6 mb-4">
+                    <h5 class="fw-bold">Strategy & Tips</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Marketing Plans</a></li>
+                        <li><a href="#">Campaign Strategies</a></li>
+                        <li><a href="#">Lead Generation Tips</a></li>
+                        <li><a href="#">Conversion Optimization</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="footer-bottom text-center">
+                <p>
+                    <i class="fa-regular fa-copyright"></i>
+                    2026 Digital Marketing Guide. All rights reserved.
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="asset/js/script.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"> </script>
+
+    <!-- Question & Answer JS-->
+    <script>
+        document.querySelectorAll('.question-header').forEach(header => {
+            header.addEventListener('click', () => {
+                header.classList.toggle('active');
+            });
+        });
+    </script>
+
+</body>
+
+</html>

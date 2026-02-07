@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>React Interview Questions & Answers | Beginner to Advanced</title>
+
+    <meta name="description"
+        content="Prepare for React interviews with the latest React interview questions and answers. Covers beginner, intermediate, and advanced React concepts, hooks, components, state, props, and performance optimization." />
+
+    <meta name="keywords"
+        content="react interview questions, react js interview questions, react interview questions and answers, react hooks interview questions, react coding interview, frontend interview questions, javascript react interview" />
+
+    <meta name="author" content="React Interview Guide">
+    <meta name="robots" content="index, follow">
+
+    <!--My css-->
+    <link rel="stylesheet" href="asset/css/style.css">
+    <link rel="icon" href="assets/img/company-logo.png" type="image/png">
+
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+
+<body style="background-color: #323232;">
+
+    <!-- NavBar -->
+    <nav id="Navbar" class="navbar px-3 px-md-4 py-md-3">
+
+        <div class="website-name text-white">
+
+            <!-- Logo Icon -->
+            <div class="logo-img">
+                <i class="fa-solid fa-chart-line"></i> <!-- Digital Marketing icon -->
+            </div>
+
+            <!-- Website Title -->
+            <a href="index.html" style="text-decoration: none;">
+                <h2 class="logo-style ps-3">
+                    DIGITAL MARKETING GUIDE
+                </h2>
+            </a>
+
+        </div>
+
+        <!-- Menu Items -->
+        <div class="navbar-item">
+            <div class="navbar-menu pe-5">
+                <ul class="navbar-menu-links text-white">
+
+                    <a href="index.html">
+                        <li> Home </li>
+                    </a>
+
+                    <a href="seo.html">
+                        <li> SEO </li>
+                    </a>
+
+                    <a href="social-media.html">
+                        <li> Social Media Marketing </li>
+                    </a>
+
+                    <a href="email.html">
+                        <li> Email Marketing </li>
+                    </a>
+
+                    <a href="content.html">
+                        <li> Content Marketing </li>
+                    </a>
+
+                    <a href="tools.html">
+                        <li> Tools & Resources </li>
+                    </a>
+
+                </ul>
+            </div>
+        </div>
+
+        <!-- Mobile Toggle -->
+        <div class="navbar-menu-toggle" onclick="shownavbar()">
+            <i class="bi bi-list"></i>
+        </div>
+
+    </nav>
+
+    <!-- Side Navbar -->
+    <aside class="side-navbar">
+
+        <!-- Close Icon -->
+        <p class="cross-symbol" onclick="closenavbar()">
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </p>
+
+        <div class="side-navbar-links">
+
+            <!-- Home -->
+            <p class="side-navbar-link">
+                <i class="fas fa-home"></i>
+                <a href="index.html"> Home </a>
+            </p>
+
+            <!-- SEO -->
+            <p class="side-navbar-link">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <a href="seo.html"> SEO </a>
+            </p>
+
+            <!-- Social Media Marketing -->
+            <p class="side-navbar-link">
+                <i class="fa-brands fa-facebook"></i>
+                <a href="social-media.html"> Social Media Marketing </a>
+            </p>
+
+            <!-- Email Marketing -->
+            <p class="side-navbar-link">
+                <i class="fa-solid fa-envelope"></i>
+                <a href="email.html"> Email Marketing </a>
+            </p>
+
+            <!-- Content Marketing -->
+            <p class="side-navbar-link">
+                <i class="fa-solid fa-pen-nib"></i>
+                <a href="content.html"> Content Marketing </a>
+            </p>
+
+            <!-- Tools & Resources -->
+            <p class="side-navbar-link">
+                <i class="fa-solid fa-toolbox"></i>
+                <a href="tools.html"> Tools & Resources </a>
+            </p>
+
+        </div>
+
+    </aside>
+
+    <!-- Page Header -->
+    <section class="page-header px-3">
+        <div class="page-header-content">
+            <h4>Content Marketing</h4>
+            <h1>Content Marketing Strategies, Case Studies & Learning Resources</h1>
+        </div>
+    </section>
+
+    <!-- Question & Answer -->
+    <div class="react-interview-question">
+        <div class="container">
+
+            <h3 class="header-title">
+                This section covers essential Content Marketing questions, strategies, and practical learning resources.
+            </h3>
+
+            <!-- Question 201 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans201">
+                    <span class="question-number">201</span>
+                    <h2 class="question-text">What is Content Marketing?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans201">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>A strategy focused on creating valuable content.</li>
+                        <li>Attracts and engages target audiences.</li>
+                        <li>Drives profitable customer actions.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 202 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans202">
+                    <span class="question-number">202</span>
+                    <h2 class="question-text">Why is Content Marketing important?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans202">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Builds brand authority.</li>
+                        <li>Improves SEO rankings.</li>
+                        <li>Generates leads and conversions.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 203 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans203">
+                    <span class="question-number">203</span>
+                    <h2 class="question-text">What are the types of Content Marketing?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans203">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Blogs and articles.</li>
+                        <li>Videos and infographics.</li>
+                        <li>Podcasts and ebooks.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 204 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans204">
+                    <span class="question-number">204</span>
+                    <h2 class="question-text">What is a Content Strategy?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans204">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>A plan for content creation.</li>
+                        <li>Aligns with business goals.</li>
+                        <li>Defines audience and channels.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 205 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans205">
+                    <span class="question-number">205</span>
+                    <h2 class="question-text">What is Evergreen Content?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans205">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Content that stays relevant long-term.</li>
+                        <li>Drives continuous traffic.</li>
+                        <li>Examples include guides and tutorials.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 206 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans206">
+                    <span class="question-number">206</span>
+                    <h2 class="question-text">What is Content Distribution?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans206">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Sharing content across channels.</li>
+                        <li>Includes social, email, and websites.</li>
+                        <li>Expands audience reach.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 207 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans207">
+                    <span class="question-number">207</span>
+                    <h2 class="question-text">What is a Content Calendar?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans207">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>A content publishing schedule.</li>
+                        <li>Plans topics and dates.</li>
+                        <li>Ensures consistent posting.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 208 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans208">
+                    <span class="question-number">208</span>
+                    <h2 class="question-text">What is User-Generated Content (UGC)?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans208">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Content created by customers.</li>
+                        <li>Includes reviews and testimonials.</li>
+                        <li>Builds trust and authenticity.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 209 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans209">
+                    <span class="question-number">209</span>
+                    <h2 class="question-text">What is Content Engagement?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans209">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>User interaction with content.</li>
+                        <li>Includes likes, shares, comments.</li>
+                        <li>Measures content effectiveness.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 210 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans210">
+                    <span class="question-number">210</span>
+                    <h2 class="question-text">What is Content Marketing ROI?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans210">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Return on content investment.</li>
+                        <li>Measures revenue vs cost.</li>
+                        <li>Evaluates campaign success.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 211 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans211">
+                    <span class="question-number">211</span>
+                    <h2 class="question-text">What is Evergreen Content?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans211">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Content that stays relevant long-term.</li>
+                        <li>Drives consistent traffic.</li>
+                        <li>Examples: Guides, tutorials.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 212 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans212">
+                    <span class="question-number">212</span>
+                    <h2 class="question-text">What is Content Refreshing?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans212">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Updating old content.</li>
+                        <li>Adds new data and keywords.</li>
+                        <li>Improves SEO performance.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 213 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans213">
+                    <span class="question-number">213</span>
+                    <h2 class="question-text">What is Cornerstone Content?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans213">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Main website content.</li>
+                        <li>Covers core topics deeply.</li>
+                        <li>Supports internal linking.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 214 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans214">
+                    <span class="question-number">214</span>
+                    <h2 class="question-text">What is Content Repurposing?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans214">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Reusing existing content.</li>
+                        <li>Converts into new formats.</li>
+                        <li>Expands audience reach.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 215 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans215">
+                    <span class="question-number">215</span>
+                    <h2 class="question-text">What is User-Generated Content (UGC)?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans215">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Content created by users.</li>
+                        <li>Includes reviews and posts.</li>
+                        <li>Builds brand trust.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 216 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans216">
+                    <span class="question-number">216</span>
+                    <h2 class="question-text">What is Content Personalization?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans216">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Customized content delivery.</li>
+                        <li>Based on user behavior.</li>
+                        <li>Improves engagement.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 217 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans217">
+                    <span class="question-number">217</span>
+                    <h2 class="question-text">What is a Content Funnel?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans217">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Content mapped to buyer stages.</li>
+                        <li>Awareness to conversion.</li>
+                        <li>Guides customer journey.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 218 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans218">
+                    <span class="question-number">218</span>
+                    <h2 class="question-text">What is Visual Content Marketing?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans218">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Uses images and videos.</li>
+                        <li>Improves engagement.</li>
+                        <li>Boosts shareability.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 219 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans219">
+                    <span class="question-number">219</span>
+                    <h2 class="question-text">What is Content Optimization?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans219">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Improving content quality.</li>
+                        <li>Uses SEO techniques.</li>
+                        <li>Enhances visibility.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 220 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans220">
+                    <span class="question-number">220</span>
+                    <h2 class="question-text">What is Content Distribution?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans220">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Sharing content across platforms.</li>
+                        <li>Includes social and email.</li>
+                        <li>Maximizes reach.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 221 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans221">
+                    <span class="question-number">221</span>
+                    <h2 class="question-text">What is Content Curation?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans221">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Collecting relevant content.</li>
+                        <li>Sharing from trusted sources.</li>
+                        <li>Adds value to audience.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 222 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans222">
+                    <span class="question-number">222</span>
+                    <h2 class="question-text">What is a Content Audit?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans222">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Reviewing existing content.</li>
+                        <li>Analyzes performance.</li>
+                        <li>Identifies improvement areas.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 223 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans223">
+                    <span class="question-number">223</span>
+                    <h2 class="question-text">What is Content Gap Analysis?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans223">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Finding missing topics.</li>
+                        <li>Compares competitor content.</li>
+                        <li>Improves strategy planning.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 224 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans224">
+                    <span class="question-number">224</span>
+                    <h2 class="question-text">What is Interactive Content?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans224">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Engages user participation.</li>
+                        <li>Examples: Quizzes, polls.</li>
+                        <li>Boosts engagement rates.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 225 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans225">
+                    <span class="question-number">225</span>
+                    <h2 class="question-text">What is Content Lifecycle?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans225">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Stages of content existence.</li>
+                        <li>Creation to updating.</li>
+                        <li>Ends with archiving.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 226 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans226">
+                    <span class="question-number">226</span>
+                    <h2 class="question-text">What is Content Syndication?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans226">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Republishing content elsewhere.</li>
+                        <li>Expands audience reach.</li>
+                        <li>Drives referral traffic.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 227 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans227">
+                    <span class="question-number">227</span>
+                    <h2 class="question-text">What is Micro Content?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans227">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Short-form content pieces.</li>
+                        <li>Examples: Tweets, reels.</li>
+                        <li>Quick audience engagement.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 228 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans228">
+                    <span class="question-number">228</span>
+                    <h2 class="question-text">What is Content Engagement Rate?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans228">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Measures user interaction.</li>
+                        <li>Includes likes, shares.</li>
+                        <li>Shows content effectiveness.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 229 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans229">
+                    <span class="question-number">229</span>
+                    <h2 class="question-text">What is Content Branding?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans229">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Aligning content with brand.</li>
+                        <li>Maintains brand voice.</li>
+                        <li>Builds recognition.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 230 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans230">
+                    <span class="question-number">230</span>
+                    <h2 class="question-text">What is Content Marketing Funnel?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans230">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Content for each buyer stage.</li>
+                        <li>Awareness to purchase.</li>
+                        <li>Improves conversions.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 231 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans231">
+                    <span class="question-number">231</span>
+                    <h2 class="question-text">What is Evergreen Content?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans231">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Content that stays relevant.</li>
+                        <li>Drives long-term traffic.</li>
+                        <li>Requires minimal updates.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 232 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans232">
+                    <span class="question-number">232</span>
+                    <h2 class="question-text">What is Content Personalization?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans232">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Customizing content for users.</li>
+                        <li>Based on behavior/data.</li>
+                        <li>Improves engagement.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 233 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans233">
+                    <span class="question-number">233</span>
+                    <h2 class="question-text">What is User-Generated Content (UGC)?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans233">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Content created by users.</li>
+                        <li>Includes reviews, posts.</li>
+                        <li>Builds brand trust.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 234 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans234">
+                    <span class="question-number">234</span>
+                    <h2 class="question-text">What is Visual Content Marketing?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans234">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Uses images/videos.</li>
+                        <li>Improves content appeal.</li>
+                        <li>Boosts engagement.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 235 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans235">
+                    <span class="question-number">235</span>
+                    <h2 class="question-text">What is Content Distribution?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans235">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Sharing content across channels.</li>
+                        <li>Includes social, email.</li>
+                        <li>Expands audience reach.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 236 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans236">
+                    <span class="question-number">236</span>
+                    <h2 class="question-text">What is Content Repurposing?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans236">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Reusing existing content.</li>
+                        <li>Convert blogs to videos.</li>
+                        <li>Saves time/resources.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 237 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans237">
+                    <span class="question-number">237</span>
+                    <h2 class="question-text">What is Content Authority?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans237">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Trust level of content.</li>
+                        <li>Built through expertise.</li>
+                        <li>Improves SEO ranking.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 238 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans238">
+                    <span class="question-number">238</span>
+                    <h2 class="question-text">What is Content Virality?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans238">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Rapid content sharing.</li>
+                        <li>Spreads across platforms.</li>
+                        <li>Drives massive reach.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 239 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans239">
+                    <span class="question-number">239</span>
+                    <h2 class="question-text">What is Content Monetization?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans239">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Earning from content.</li>
+                        <li>Ads, sponsorships.</li>
+                        <li>Affiliate marketing.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 240 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans240">
+                    <span class="question-number">240</span>
+                    <h2 class="question-text">What is Content Performance Metrics?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans240">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Measures content success.</li>
+                        <li>Traffic, engagement, leads.</li>
+                        <li>Helps strategy optimization.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 241 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans241">
+                    <span class="question-number">241</span>
+                    <h2 class="question-text">What is Content Lifecycle?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans241">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Stages of content creation.</li>
+                        <li>Planning to distribution.</li>
+                        <li>Ends with analysis.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 242 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans242">
+                    <span class="question-number">242</span>
+                    <h2 class="question-text">What is Content Gap Analysis?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans242">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Identifies missing topics.</li>
+                        <li>Analyzes competitor content.</li>
+                        <li>Improves strategy.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 243 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans243">
+                    <span class="question-number">243</span>
+                    <h2 class="question-text">What is Content Engagement Rate?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans243">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Measures audience interaction.</li>
+                        <li>Likes, shares, comments.</li>
+                        <li>Shows content effectiveness.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 244 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans244">
+                    <span class="question-number">244</span>
+                    <h2 class="question-text">What is Interactive Content?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans244">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Engages users actively.</li>
+                        <li>Quizzes, polls, calculators.</li>
+                        <li>Boosts retention.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 245 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans245">
+                    <span class="question-number">245</span>
+                    <h2 class="question-text">What is Content Branding?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans245">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Aligning content with brand.</li>
+                        <li>Maintains brand voice.</li>
+                        <li>Builds recognition.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 246 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans246">
+                    <span class="question-number">246</span>
+                    <h2 class="question-text">What is Content Automation?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans246">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Automating content tasks.</li>
+                        <li>Scheduling, publishing.</li>
+                        <li>Saves time.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 247 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans247">
+                    <span class="question-number">247</span>
+                    <h2 class="question-text">What is Content Funnel?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans247">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Content for buyer journey.</li>
+                        <li>Awareness to conversion.</li>
+                        <li>Guides prospects.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 248 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans248">
+                    <span class="question-number">248</span>
+                    <h2 class="question-text">What is Content Scalability?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans248">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Ability to grow content.</li>
+                        <li>Handles larger audiences.</li>
+                        <li>Maintains quality.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 249 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans249">
+                    <span class="question-number">249</span>
+                    <h2 class="question-text">What is Content Conversion Path?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans249">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>User journey to action.</li>
+                        <li>From content to lead.</li>
+                        <li>Optimizes conversions.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 250 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans250">
+                    <span class="question-number">250</span>
+                    <h2 class="question-text">What is Content Marketing Dashboard?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans250">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Visual performance tracker.</li>
+                        <li>Shows KPIs, metrics.</li>
+                        <li>Supports decision-making.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="loan-footer px-2">
+        <div class="container">
+            <div class="row">
+
+                <!-- About Digital Marketing -->
+                <div class="col-md-4 col-sm-12 mb-4">
+                    <h5 class="fw-bold">Digital Marketing Guide</h5>
+
+                    <p class="pe-0 pe-md-3">
+                        A complete beginner-friendly guide for Digital Marketing.
+                        Learn SEO, Social Media Marketing, Email Marketing,
+                        Content Strategy, Paid Ads, and more—all in one place.
+                        Clear explanations and practical tips to help you grow online.
+                    </p>
+                </div>
+
+                <!-- Digital Marketing Topics -->
+                <div class="col-md-2 col-6 mb-4">
+                    <h5 class="fw-bold">Topics</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">SEO Basics</a></li>
+                        <li><a href="#">Social Media Marketing</a></li>
+                        <li><a href="#">Email Marketing</a></li>
+                        <li><a href="#">Content Strategy</a></li>
+                        <li><a href="#">Paid Advertising</a></li>
+                    </ul>
+                </div>
+
+                <!-- Tools & Techniques -->
+                <div class="col-md-2 col-6 mb-4">
+                    <h5 class="fw-bold">Tools & Techniques</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Google Ads</a></li>
+                        <li><a href="#">Facebook Ads</a></li>
+                        <li><a href="#">Analytics Tools</a></li>
+                        <li><a href="#">SEO Tools</a></li>
+                        <li><a href="#">Email Automation</a></li>
+                    </ul>
+                </div>
+
+                <!-- Learning Resources -->
+                <div class="col-md-2 col-6 mb-4">
+                    <h5 class="fw-bold">Learning Resources</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Blogs & Articles</a></li>
+                        <li><a href="#">Video Tutorials</a></li>
+                        <li><a href="#">E-books & PDFs</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                        <li><a href="#">Webinars</a></li>
+                    </ul>
+                </div>
+
+                <!-- Strategy & Tips -->
+                <div class="col-md-2 col-6 mb-4">
+                    <h5 class="fw-bold">Strategy & Tips</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Marketing Plans</a></li>
+                        <li><a href="#">Campaign Strategies</a></li>
+                        <li><a href="#">Lead Generation Tips</a></li>
+                        <li><a href="#">Conversion Optimization</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="footer-bottom text-center">
+                <p>
+                    <i class="fa-regular fa-copyright"></i>
+                    2026 Digital Marketing Guide. All rights reserved.
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="asset/js/script.js"> </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- Question & Answer JS-->
+    <script>
+        document.querySelectorAll('.question-header').forEach(header => {
+            header.addEventListener('click', () => {
+                header.classList.toggle('active');
+            });
+        });
+    </script>
+
+</body>
+
+</html>

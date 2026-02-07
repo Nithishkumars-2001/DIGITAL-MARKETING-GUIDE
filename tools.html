@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>React Interview Questions & Answers | Beginner to Advanced</title>
+
+  <meta name="description"
+    content="Prepare for React interviews with the latest React interview questions and answers. Covers beginner, intermediate, and advanced React concepts, hooks, components, state, props, and performance optimization." />
+
+  <meta name="keywords"
+    content="react interview questions, react js interview questions, react interview questions and answers, react hooks interview questions, react coding interview, frontend interview questions, javascript react interview" />
+
+  <meta name="author" content="React Interview Guide">
+  <meta name="robots" content="index, follow">
+
+  <!--My css-->
+  <link rel="stylesheet" href="asset/css/style.css">
+  <link rel="icon" href="assets/img/company-logo.png" type="image/png">
+
+  <!--Google font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+    rel="stylesheet">
+
+  <!--Font Awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!--Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+
+<body style="background-color: #323232;">
+
+  <!-- NavBar -->
+  <nav id="Navbar" class="navbar px-3 px-md-4 py-md-3">
+
+    <div class="website-name text-white">
+
+      <!-- Logo Icon -->
+      <div class="logo-img">
+        <i class="fa-solid fa-chart-line"></i> <!-- Digital Marketing icon -->
+      </div>
+
+      <!-- Website Title -->
+      <a href="index.html" style="text-decoration: none;">
+        <h2 class="logo-style ps-3">
+          DIGITAL MARKETING GUIDE
+        </h2>
+      </a>
+
+    </div>
+
+    <!-- Menu Items -->
+    <div class="navbar-item">
+      <div class="navbar-menu pe-5">
+        <ul class="navbar-menu-links text-white">
+
+          <a href="index.html">
+            <li> Home </li>
+          </a>
+
+          <a href="seo.html">
+            <li> SEO </li>
+          </a>
+
+          <a href="social-media.html">
+            <li> Social Media Marketing </li>
+          </a>
+
+          <a href="email.html">
+            <li> Email Marketing </li>
+          </a>
+
+          <a href="content.html">
+            <li> Content Marketing </li>
+          </a>
+
+          <a href="tools.html">
+            <li> Tools & Resources </li>
+          </a>
+
+        </ul>
+      </div>
+    </div>
+
+    <!-- Mobile Toggle -->
+    <div class="navbar-menu-toggle" onclick="shownavbar()">
+      <i class="bi bi-list"></i>
+    </div>
+
+  </nav>
+
+  <!-- Side Navbar -->
+  <aside class="side-navbar">
+
+    <!-- Close Icon -->
+    <p class="cross-symbol" onclick="closenavbar()">
+      <i class="fa fa-times" aria-hidden="true"></i>
+    </p>
+
+    <div class="side-navbar-links">
+
+      <!-- Home -->
+      <p class="side-navbar-link">
+        <i class="fas fa-home"></i>
+        <a href="index.html"> Home </a>
+      </p>
+
+      <!-- SEO -->
+      <p class="side-navbar-link">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <a href="seo.html"> SEO </a>
+      </p>
+
+      <!-- Social Media Marketing -->
+      <p class="side-navbar-link">
+        <i class="fa-brands fa-facebook"></i>
+        <a href="social-media.html"> Social Media Marketing </a>
+      </p>
+
+      <!-- Email Marketing -->
+      <p class="side-navbar-link">
+        <i class="fa-solid fa-envelope"></i>
+        <a href="email.html"> Email Marketing </a>
+      </p>
+
+      <!-- Content Marketing -->
+      <p class="side-navbar-link">
+        <i class="fa-solid fa-pen-nib"></i>
+        <a href="content.html"> Content Marketing </a>
+      </p>
+
+      <!-- Tools & Resources -->
+      <p class="side-navbar-link">
+        <i class="fa-solid fa-toolbox"></i>
+        <a href="tools.html"> Tools & Resources </a>
+      </p>
+
+    </div>
+
+  </aside>
+
+  <!-- Page Header -->
+  <section class="page-header px-3">
+    <div class="page-header-content">
+      <h4>MARKETING TOOLS & RESOURCES</h4>
+      <h1>Essential Marketing Tools & Resources – Platforms, Software & Growth Solutions</h1>
+    </div>
+  </section>
+
+  <!-- Question & Answer -->
+  <div class="react-interview-question">
+    <div class="container">
+
+      <h3 class="header-title">Marketing Tools & Resources – Questions & Answers</h3>
+
+      <!-- Question 251 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans251">
+          <span class="question-number">251</span>
+          <h2 class="question-text">What are Marketing Tools?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans251">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>Software used in marketing.</li>
+            <li>Helps automate tasks.</li>
+            <li>Improves campaign performance.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Question 252 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans252">
+          <span class="question-number">252</span>
+          <h2 class="question-text">What is an All-in-One Marketing Platform?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans252">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>Combines multiple tools.</li>
+            <li>Email, CRM, automation.</li>
+            <li>Centralized management.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Question 253 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans253">
+          <span class="question-number">253</span>
+          <h2 class="question-text">What is HubSpot used for?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans253">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>Inbound marketing platform.</li>
+            <li>CRM and automation.</li>
+            <li>Lead tracking.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Question 254 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans254">
+          <span class="question-number">254</span>
+          <h2 class="question-text">What is Mailchimp?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans254">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>Email marketing tool.</li>
+            <li>Campaign automation.</li>
+            <li>Audience segmentation.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Question 255 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans255">
+          <span class="question-number">255</span>
+          <h2 class="question-text">What is Canva used for in marketing?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans255">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>Graphic design creation.</li>
+            <li>Social media visuals.</li>
+            <li>Marketing creatives.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Question 256 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans256">
+          <span class="question-number">256</span>
+          <h2 class="question-text">What is Hootsuite?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans256">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>Social media scheduler.</li>
+            <li>Manages multiple accounts.</li>
+            <li>Tracks engagement.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Question 257 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans257">
+          <span class="question-number">257</span>
+          <h2 class="question-text">What is SEMrush?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans257">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>SEO research tool.</li>
+            <li>Keyword analysis.</li>
+            <li>Competitor tracking.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Question 258 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans258">
+          <span class="question-number">258</span>
+          <h2 class="question-text">What is Google Analytics?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans258">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>Website analytics platform.</li>
+            <li>Tracks user behavior.</li>
+            <li>Measures traffic sources.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Question 259 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans259">
+          <span class="question-number">259</span>
+          <h2 class="question-text">What is Buffer?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans259">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>Social media management tool.</li>
+            <li>Schedules posts.</li>
+            <li>Analyzes performance.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Question 260 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans260">
+          <span class="question-number">260</span>
+          <h2 class="question-text">What is Ahrefs used for?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans260">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>Backlink analysis.</li>
+            <li>SEO audits.</li>
+            <li>Keyword research.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Question 261 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans261">
+          <span class="question-number">261</span>
+          <h2 class="question-text">What is Google Ads?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans261">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>Online advertising platform.</li>
+            <li>Runs paid campaigns.</li>
+            <li>Drives website traffic.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Question 262 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans262">
+          <span class="question-number">262</span>
+          <h2 class="question-text">What is Facebook Ads Manager?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans262">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>Manages Facebook ads.</li>
+            <li>Audience targeting.</li>
+            <li>Performance tracking.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Question 263 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans263">
+          <span class="question-number">263</span>
+          <h2 class="question-text">What is Google Search Console?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans263">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>SEO monitoring tool.</li>
+            <li>Tracks search performance.</li>
+            <li>Fixes indexing issues.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Question 264 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans264">
+          <span class="question-number">264</span>
+          <h2 class="question-text">What is Moz?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans264">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>SEO software platform.</li>
+            <li>Keyword tracking.</li>
+            <li>Site audits.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Question 265 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans265">
+          <span class="question-number">265</span>
+          <h2 class="question-text">What is Sprout Social?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans265">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>Social media management tool.</li>
+            <li>Analytics and scheduling.</li>
+            <li>Customer engagement.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Question 266 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans266">
+          <span class="question-number">266</span>
+          <h2 class="question-text">What is Trello used for in marketing?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans266">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>Project management.</li>
+            <li>Content planning.</li>
+            <li>Team collaboration.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Question 267 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans267">
+          <span class="question-number">267</span>
+          <h2 class="question-text">What is Asana?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans267">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>Task management tool.</li>
+            <li>Workflow tracking.</li>
+            <li>Team productivity.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Question 268 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans268">
+          <span class="question-number">268</span>
+          <h2 class="question-text">What is Zapier?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans268">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>Automation integration tool.</li>
+            <li>Connects apps.</li>
+            <li>Automates workflows.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Question 269 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans269">
+          <span class="question-number">269</span>
+          <h2 class="question-text">What is Grammarly used for in marketing?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans269">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>Content proofreading.</li>
+            <li>Grammar correction.</li>
+            <li>Improves readability.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Question 270 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans270">
+          <span class="question-number">270</span>
+          <h2 class="question-text">What is Google Tag Manager?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans270">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>Tag management system.</li>
+            <li>Tracks marketing scripts.</li>
+            <li>No coding required.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Question 271 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans271">
+          <span class="question-number">271</span>
+          <h2 class="question-text">What is Notion used for in marketing?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans271">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>Content planning workspace.</li>
+            <li>Team collaboration.</li>
+            <li>Campaign documentation.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Question 272 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans272">
+          <span class="question-number">272</span>
+          <h2 class="question-text">What is Monday.com?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans272">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>Work management platform.</li>
+            <li>Campaign tracking.</li>
+            <li>Team workflow automation.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Question 273 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans273">
+          <span class="question-number">273</span>
+          <h2 class="question-text">What is ClickUp?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans273">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>Productivity platform.</li>
+            <li>Task and campaign management.</li>
+            <li>Marketing workflow tracking.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Question 274 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans274">
+          <span class="question-number">274</span>
+          <h2 class="question-text">What is CoSchedule?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans274">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>Marketing calendar tool.</li>
+            <li>Content scheduling.</li>
+            <li>Campaign planning.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Question 275 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans275">
+          <span class="question-number">275</span>
+          <h2 class="question-text">What is Later?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans275">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>Instagram scheduling tool.</li>
+            <li>Visual content planner.</li>
+            <li>Social automation.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Question 276 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans276">
+          <span class="question-number">276</span>
+          <h2 class="question-text">What is Planoly?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans276">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>Instagram planner.</li>
+            <li>Grid preview tool.</li>
+            <li>Post scheduling.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Question 277 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans277">
+          <span class="question-number">277</span>
+          <h2 class="question-text">What is Google Data Studio?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans277">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>Reporting dashboard tool.</li>
+            <li>Visualizes analytics data.</li>
+            <li>Creates marketing reports.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Question 278 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans278">
+          <span class="question-number">278</span>
+          <h2 class="question-text">What is Hotjar?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans278">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>User behavior tool.</li>
+            <li>Heatmaps tracking.</li>
+            <li>Session recordings.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Question 279 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans279">
+          <span class="question-number">279</span>
+          <h2 class="question-text">What is Crazy Egg?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans279">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>Website heatmap tool.</li>
+            <li>Click tracking.</li>
+            <li>UX optimization insights.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Question 280 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans280">
+          <span class="question-number">280</span>
+          <h2 class="question-text">What is Surfer SEO?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans280">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>On-page SEO tool.</li>
+            <li>Content optimization.</li>
+            <li>SERP analysis.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Question 281 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans281">
+          <span class="question-number">281</span>
+          <h2 class="question-text">What is Ubersuggest?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans281">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>Keyword research tool.</li>
+            <li>SEO suggestions.</li>
+            <li>Traffic insights.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Question 282 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans282">
+          <span class="question-number">282</span>
+          <h2 class="question-text">What is AnswerThePublic?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans282">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>Content idea generator.</li>
+            <li>Search query insights.</li>
+            <li>Keyword questions data.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Question 283 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans283">
+          <span class="question-number">283</span>
+          <h2 class="question-text">What is BuzzSumo?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans283">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>Content research tool.</li>
+            <li>Analyzes trending topics.</li>
+            <li>Influencer discovery.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Question 284 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans284">
+          <span class="question-number">284</span>
+          <h2 class="question-text">What is Loom?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans284">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>Video messaging tool.</li>
+            <li>Screen recording.</li>
+            <li>Team communication.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Question 285 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans285">
+          <span class="question-number">285</span>
+          <h2 class="question-text">What is VidIQ?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans285">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>YouTube SEO tool.</li>
+            <li>Video optimization.</li>
+            <li>Keyword insights.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Question 286 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans286">
+          <span class="question-number">286</span>
+          <h2 class="question-text">What is TubeBuddy?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans286">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>YouTube marketing tool.</li>
+            <li>Tag optimization.</li>
+            <li>Channel analytics.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Question 287 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans287">
+          <span class="question-number">287</span>
+          <h2 class="question-text">What is Shopify?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans287">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>E-commerce platform.</li>
+            <li>Online store management.</li>
+            <li>Sales marketing integration.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Question 288 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans288">
+          <span class="question-number">288</span>
+          <h2 class="question-text">What is WordPress?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans288">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>Content management system.</li>
+            <li>Website creation.</li>
+            <li>Blog marketing platform.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Question 289 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans289">
+          <span class="question-number">289</span>
+          <h2 class="question-text">What is Wix?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans289">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>Website builder.</li>
+            <li>Drag-and-drop design.</li>
+            <li>Marketing integrations.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Question 290 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans290">
+          <span class="question-number">290</span>
+          <h2 class="question-text">What is Squarespace?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans290">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>Website building platform.</li>
+            <li>Portfolio marketing.</li>
+            <li>E-commerce support.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Question 291 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans291">
+          <span class="question-number">291</span>
+          <h2 class="question-text">What is ConvertKit?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans291">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>Email automation tool.</li>
+            <li>Creator marketing.</li>
+            <li>Subscriber segmentation.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Question 292 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans292">
+          <span class="question-number">292</span>
+          <h2 class="question-text">What is ActiveCampaign?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans292">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>Email marketing automation.</li>
+            <li>CRM integration.</li>
+            <li>Customer journeys.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Question 293 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans293">
+          <span class="question-number">293</span>
+          <h2 class="question-text">What is Sendinblue (Brevo)?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans293">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>Email marketing platform.</li>
+            <li>SMS campaigns.</li>
+            <li>Automation workflows.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Question 294 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans294">
+          <span class="question-number">294</span>
+          <h2 class="question-text">What is GetResponse?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans294">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>Email marketing tool.</li>
+            <li>Landing pages.</li>
+            <li>Marketing funnels.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Question 295 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans295">
+          <span class="question-number">295</span>
+          <h2 class="question-text">What is Leadpages?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans295">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>Landing page builder.</li>
+            <li>Lead generation.</li>
+            <li>Conversion optimization.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Question 296 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans296">
+          <span class="question-number">296</span>
+          <h2 class="question-text">What is Unbounce?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans296">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>Landing page platform.</li>
+            <li>A/B testing.</li>
+            <li>Conversion tracking.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Question 297 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans297">
+          <span class="question-number">297</span>
+          <h2 class="question-text">What is OptinMonster?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans297">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>Lead capture tool.</li>
+            <li>Pop-up campaigns.</li>
+            <li>Conversion optimization.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Question 298 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans298">
+          <span class="question-number">298</span>
+          <h2 class="question-text">What is Drift?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans298">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>Conversational marketing tool.</li>
+            <li>Live chat automation.</li>
+            <li>Lead qualification.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Question 299 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans299">
+          <span class="question-number">299</span>
+          <h2 class="question-text">What is Intercom?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans299">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>Customer messaging platform.</li>
+            <li>Chat support.</li>
+            <li>User engagement.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Question 300 -->
+      <div class="question-card">
+        <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans300">
+          <span class="question-number">300</span>
+          <h2 class="question-text">Why are Marketing Tools important?</h2>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="answer-body collapse" id="ans300">
+          <p><strong>Answer:</strong></p>
+          <ul>
+            <li>Automate marketing tasks.</li>
+            <li>Improve efficiency.</li>
+            <li>Increase campaign ROI.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="loan-footer px-2">
+    <div class="container">
+      <div class="row">
+
+        <!-- About Digital Marketing -->
+        <div class="col-md-4 col-sm-12 mb-4">
+          <h5 class="fw-bold">Digital Marketing Guide</h5>
+
+          <p class="pe-0 pe-md-3">
+            A complete beginner-friendly guide for Digital Marketing.
+            Learn SEO, Social Media Marketing, Email Marketing,
+            Content Strategy, Paid Ads, and more—all in one place.
+            Clear explanations and practical tips to help you grow online.
+          </p>
+        </div>
+
+        <!-- Digital Marketing Topics -->
+        <div class="col-md-2 col-6 mb-4">
+          <h5 class="fw-bold">Topics</h5>
+          <ul class="footer-links">
+            <li><a href="#">SEO Basics</a></li>
+            <li><a href="#">Social Media Marketing</a></li>
+            <li><a href="#">Email Marketing</a></li>
+            <li><a href="#">Content Strategy</a></li>
+            <li><a href="#">Paid Advertising</a></li>
+          </ul>
+        </div>
+
+        <!-- Tools & Techniques -->
+        <div class="col-md-2 col-6 mb-4">
+          <h5 class="fw-bold">Tools & Techniques</h5>
+          <ul class="footer-links">
+            <li><a href="#">Google Ads</a></li>
+            <li><a href="#">Facebook Ads</a></li>
+            <li><a href="#">Analytics Tools</a></li>
+            <li><a href="#">SEO Tools</a></li>
+            <li><a href="#">Email Automation</a></li>
+          </ul>
+        </div>
+
+        <!-- Learning Resources -->
+        <div class="col-md-2 col-6 mb-4">
+          <h5 class="fw-bold">Learning Resources</h5>
+          <ul class="footer-links">
+            <li><a href="#">Blogs & Articles</a></li>
+            <li><a href="#">Video Tutorials</a></li>
+            <li><a href="#">E-books & PDFs</a></li>
+            <li><a href="#">Case Studies</a></li>
+            <li><a href="#">Webinars</a></li>
+          </ul>
+        </div>
+
+        <!-- Strategy & Tips -->
+        <div class="col-md-2 col-6 mb-4">
+          <h5 class="fw-bold">Strategy & Tips</h5>
+          <ul class="footer-links">
+            <li><a href="#">Marketing Plans</a></li>
+            <li><a href="#">Campaign Strategies</a></li>
+            <li><a href="#">Lead Generation Tips</a></li>
+            <li><a href="#">Conversion Optimization</a></li>
+            <li><a href="#">Success Stories</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Footer -->
+      <div class="footer-bottom text-center">
+        <p>
+          <i class="fa-regular fa-copyright"></i>
+          2026 Digital Marketing Guide. All rights reserved.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="asset/js/script.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <!-- Question & Answer JS-->
+  <script>
+    document.querySelectorAll('.question-header').forEach(header => {
+      header.addEventListener('click', () => {
+        header.classList.toggle('active');
+      });
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>React Interview Questions & Answers | Beginner to Advanced</title>
+
+    <meta name="description"
+        content="Prepare for React interviews with the latest React interview questions and answers. Covers beginner, intermediate, and advanced React concepts, hooks, components, state, props, and performance optimization." />
+
+    <meta name="keywords"
+        content="react interview questions, react js interview questions, react interview questions and answers, react hooks interview questions, react coding interview, frontend interview questions, javascript react interview" />
+
+    <meta name="author" content="React Interview Guide">
+    <meta name="robots" content="index, follow">
+
+    <!--My css-->
+    <link rel="stylesheet" href="asset/css/style.css">
+    <link rel="icon" href="assets/img/company-logo.png" type="image/png">
+
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+
+<body style="background-color: #323232;">
+
+    <!-- NavBar -->
+    <nav id="Navbar" class="navbar px-3 px-md-4 py-md-3">
+
+        <div class="website-name text-white">
+
+            <!-- Logo Icon -->
+            <div class="logo-img">
+                <i class="fa-solid fa-chart-line"></i> <!-- Digital Marketing icon -->
+            </div>
+
+            <!-- Website Title -->
+            <a href="index.html" style="text-decoration: none;">
+                <h2 class="logo-style ps-3">
+                    DIGITAL MARKETING GUIDE
+                </h2>
+            </a>
+
+        </div>
+
+        <!-- Menu Items -->
+        <div class="navbar-item">
+            <div class="navbar-menu pe-5">
+                <ul class="navbar-menu-links text-white">
+
+                    <a href="index.html">
+                        <li> Home </li>
+                    </a>
+
+                    <a href="seo.html">
+                        <li> SEO </li>
+                    </a>
+
+                    <a href="social-media.html">
+                        <li> Social Media Marketing </li>
+                    </a>
+
+                    <a href="email.html">
+                        <li> Email Marketing </li>
+                    </a>
+
+                    <a href="content.html">
+                        <li> Content Marketing </li>
+                    </a>
+
+                    <a href="tools.html">
+                        <li> Tools & Resources </li>
+                    </a>
+
+                </ul>
+            </div>
+        </div>
+
+        <!-- Mobile Toggle -->
+        <div class="navbar-menu-toggle" onclick="shownavbar()">
+            <i class="bi bi-list"></i>
+        </div>
+
+    </nav>
+
+    <!-- Side Navbar -->
+    <aside class="side-navbar">
+
+        <!-- Close Icon -->
+        <p class="cross-symbol" onclick="closenavbar()">
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </p>
+
+        <div class="side-navbar-links">
+
+            <!-- Home -->
+            <p class="side-navbar-link">
+                <i class="fas fa-home"></i>
+                <a href="index.html"> Home </a>
+            </p>
+
+            <!-- SEO -->
+            <p class="side-navbar-link">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <a href="seo.html"> SEO </a>
+            </p>
+
+            <!-- Social Media Marketing -->
+            <p class="side-navbar-link">
+                <i class="fa-brands fa-facebook"></i>
+                <a href="social-media.html"> Social Media Marketing </a>
+            </p>
+
+            <!-- Email Marketing -->
+            <p class="side-navbar-link">
+                <i class="fa-solid fa-envelope"></i>
+                <a href="email.html"> Email Marketing </a>
+            </p>
+
+            <!-- Content Marketing -->
+            <p class="side-navbar-link">
+                <i class="fa-solid fa-pen-nib"></i>
+                <a href="content.html"> Content Marketing </a>
+            </p>
+
+            <!-- Tools & Resources -->
+            <p class="side-navbar-link">
+                <i class="fa-solid fa-toolbox"></i>
+                <a href="tools.html"> Tools & Resources </a>
+            </p>
+
+        </div>
+
+    </aside>
+
+    <!-- Page Header -->
+    <section class="page-header px-3">
+        <div class="page-header-content">
+            <h4>EMAIL MARKETING</h4>
+            <h1>Comprehensive Email Marketing Guide – Campaigns, Strategies & Automation</h1>
+        </div>
+    </section>
+
+    <!-- Question & Answer -->
+    <div class="react-interview-question">
+        <div class="container">
+
+            <h3 class="header-title">Email Marketing – Questions & Answers</h3>
+
+            <!-- Question 151 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans151">
+                    <span class="question-number">151</span>
+                    <h2 class="question-text">What is Email Personalization?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans151">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Email personalization is tailoring email content using subscriber data.</li>
+                        <li>Examples include using the recipient’s name, location, or purchase history.</li>
+                        <li>It improves engagement and conversion rates.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 152 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans152">
+                    <span class="question-number">152</span>
+                    <h2 class="question-text">Why is Personalization Important in Email Marketing?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans152">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Personalized emails feel more relevant to users.</li>
+                        <li>They increase open and click-through rates.</li>
+                        <li>They help build stronger customer relationships.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 153 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans153">
+                    <span class="question-number">153</span>
+                    <h2 class="question-text">What is a Dynamic Email?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans153">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>A dynamic email changes content based on user data.</li>
+                        <li>Images, offers, or text can vary per recipient.</li>
+                        <li>It improves relevance and engagement.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 154 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans154">
+                    <span class="question-number">154</span>
+                    <h2 class="question-text">What is Behavioral Email Marketing?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans154">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Emails triggered by user actions or behavior.</li>
+                        <li>Examples include downloads or website visits.</li>
+                        <li>Helps deliver timely and relevant messages.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 155 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans155">
+                    <span class="question-number">155</span>
+                    <h2 class="question-text">What is a Cart Abandonment Email?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans155">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>An automated email sent when users leave items in their cart.</li>
+                        <li>Encourages them to complete the purchase.</li>
+                        <li>Often includes reminders or discounts.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 156 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans156">
+                    <span class="question-number">156</span>
+                    <h2 class="question-text">What is Email Frequency?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans156">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Email frequency refers to how often emails are sent.</li>
+                        <li>It can be daily, weekly, or monthly.</li>
+                        <li>Proper frequency prevents subscriber fatigue.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 157 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans157">
+                    <span class="question-number">157</span>
+                    <h2 class="question-text">What Happens if Emails Are Sent Too Frequently?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans157">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Subscribers may unsubscribe.</li>
+                        <li>Spam complaints may increase.</li>
+                        <li>Engagement rates may drop.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 158 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans158">
+                    <span class="question-number">158</span>
+                    <h2 class="question-text">What is a Preference Center?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans158">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>A page where subscribers manage email settings.</li>
+                        <li>They can choose topics or frequency.</li>
+                        <li>Helps reduce unsubscribes.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 159 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans159">
+                    <span class="question-number">159</span>
+                    <h2 class="question-text">What is Email Deliverability?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans159">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Deliverability measures emails reaching inboxes.</li>
+                        <li>Affected by sender reputation and spam filters.</li>
+                        <li>Good practices improve inbox placement.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 160 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans160">
+                    <span class="question-number">160</span>
+                    <h2 class="question-text">What is an Email Marketing Funnel?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans160">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>A structured journey from lead to customer.</li>
+                        <li>Includes awareness, nurturing, and conversion emails.</li>
+                        <li>Helps guide users toward purchase decisions.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 161 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans161">
+                    <span class="question-number">161</span>
+                    <h2 class="question-text">What is an Email Drip Campaign?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans161">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>A drip campaign is a sequence of automated emails.</li>
+                        <li>Sent based on time or user actions.</li>
+                        <li>Used for nurturing leads and onboarding users.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 162 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans162">
+                    <span class="question-number">162</span>
+                    <h2 class="question-text">What is Lead Nurturing in Email Marketing?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans162">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Lead nurturing builds relationships with prospects.</li>
+                        <li>It provides valuable content over time.</li>
+                        <li>Helps convert leads into customers.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 163 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans163">
+                    <span class="question-number">163</span>
+                    <h2 class="question-text">What is an Email Marketing Workflow?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans163">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>A workflow is an automated email process.</li>
+                        <li>Triggered by user behavior or schedules.</li>
+                        <li>Improves efficiency and targeting.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 164 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans164">
+                    <span class="question-number">164</span>
+                    <h2 class="question-text">What is a Re-engagement Email Campaign?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans164">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Targets inactive subscribers.</li>
+                        <li>Encourages them to re-interact.</li>
+                        <li>May include offers or updates.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 165 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans165">
+                    <span class="question-number">165</span>
+                    <h2 class="question-text">What is Email List Hygiene?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans165">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Cleaning and maintaining email lists.</li>
+                        <li>Removes inactive or invalid emails.</li>
+                        <li>Improves deliverability and engagement.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 166 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans166">
+                    <span class="question-number">166</span>
+                    <h2 class="question-text">What is a Double Opt-in?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans166">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>A two-step email subscription process.</li>
+                        <li>Users confirm via email link.</li>
+                        <li>Ensures high-quality subscribers.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 167 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans167">
+                    <span class="question-number">167</span>
+                    <h2 class="question-text">What is Email Spam Filtering?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans167">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Spam filters block unwanted emails.</li>
+                        <li>Based on sender reputation and content.</li>
+                        <li>Proper practices avoid spam folders.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 168 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans168">
+                    <span class="question-number">168</span>
+                    <h2 class="question-text">What is an Email Blacklist?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans168">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>A list of blocked email senders.</li>
+                        <li>Emails from blacklisted domains go to spam.</li>
+                        <li>Caused by spam complaints or poor practices.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 169 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans169">
+                    <span class="question-number">169</span>
+                    <h2 class="question-text">What is Sender Reputation?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans169">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>A score that measures email sender trust.</li>
+                        <li>Based on engagement and spam reports.</li>
+                        <li>Higher reputation improves deliverability.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 170 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans170">
+                    <span class="question-number">170</span>
+                    <h2 class="question-text">What is Email Marketing Compliance?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans170">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Following legal email marketing rules.</li>
+                        <li>Includes consent and unsubscribe options.</li>
+                        <li>Examples: CAN-SPAM, GDPR compliance.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 171 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans171">
+                    <span class="question-number">171</span>
+                    <h2 class="question-text">What is Email Deliverability?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans171">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Email deliverability measures inbox placement success.</li>
+                        <li>It shows how many emails reach recipients.</li>
+                        <li>Affected by reputation and email quality.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 172 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans172">
+                    <span class="question-number">172</span>
+                    <h2 class="question-text">What is an Email Suppression List?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans172">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>A list of emails excluded from campaigns.</li>
+                        <li>Includes unsubscribed or bounced users.</li>
+                        <li>Prevents unwanted email sending.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 173 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans173">
+                    <span class="question-number">173</span>
+                    <h2 class="question-text">What is Email Throttling?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans173">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Sending emails in controlled batches.</li>
+                        <li>Prevents server overload.</li>
+                        <li>Improves deliverability rates.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 174 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans174">
+                    <span class="question-number">174</span>
+                    <h2 class="question-text">What is Email Authentication?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans174">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Verifies sender identity.</li>
+                        <li>Uses SPF, DKIM, and DMARC.</li>
+                        <li>Protects against spoofing.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 175 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans175">
+                    <span class="question-number">175</span>
+                    <h2 class="question-text">What is SPF in Email Marketing?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans175">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>SPF stands for Sender Policy Framework.</li>
+                        <li>Validates authorized mail servers.</li>
+                        <li>Prevents email spoofing.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 176 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans176">
+                    <span class="question-number">176</span>
+                    <h2 class="question-text">What is DKIM?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans176">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>DKIM stands for DomainKeys Identified Mail.</li>
+                        <li>Adds a digital signature to emails.</li>
+                        <li>Ensures message authenticity.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 177 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans177">
+                    <span class="question-number">177</span>
+                    <h2 class="question-text">What is DMARC?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans177">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>DMARC stands for Domain-based Message Authentication.</li>
+                        <li>Builds on SPF and DKIM.</li>
+                        <li>Prevents phishing and spoofing.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 178 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans178">
+                    <span class="question-number">178</span>
+                    <h2 class="question-text">What is an Email Bounce Rate?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans178">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Percentage of undelivered emails.</li>
+                        <li>Includes hard and soft bounces.</li>
+                        <li>High rates harm sender reputation.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 179 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans179">
+                    <span class="question-number">179</span>
+                    <h2 class="question-text">What is Email Preview Text?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans179">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Text shown after the subject line.</li>
+                        <li>Provides email summary.</li>
+                        <li>Improves open rates.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 180 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans180">
+                    <span class="question-number">180</span>
+                    <h2 class="question-text">What is Email Conversion Rate?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans180">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Measures completed desired actions.</li>
+                        <li>Examples: purchases or sign-ups.</li>
+                        <li>Indicates campaign effectiveness.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 181 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans181">
+                    <span class="question-number">181</span>
+                    <h2 class="question-text">What is an Email Drip Campaign?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans181">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>A sequence of automated emails.</li>
+                        <li>Sent based on time or user actions.</li>
+                        <li>Nurtures leads gradually.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 182 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans182">
+                    <span class="question-number">182</span>
+                    <h2 class="question-text">What is Email Retargeting?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans182">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Targets users who interacted previously.</li>
+                        <li>Uses behavior data.</li>
+                        <li>Improves conversion chances.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 183 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans183">
+                    <span class="question-number">183</span>
+                    <h2 class="question-text">What is Email List Hygiene?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans183">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Cleaning inactive subscribers.</li>
+                        <li>Removing invalid emails.</li>
+                        <li>Improves deliverability.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 184 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans184">
+                    <span class="question-number">184</span>
+                    <h2 class="question-text">What is Email Blacklisting?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans184">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>When sender IP is blocked.</li>
+                        <li>Caused by spam complaints.</li>
+                        <li>Prevents email delivery.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 185 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans185">
+                    <span class="question-number">185</span>
+                    <h2 class="question-text">What is Email Whitelisting?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans185">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Adding sender to approved list.</li>
+                        <li>Ensures inbox delivery.</li>
+                        <li>Reduces spam filtering.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 186 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans186">
+                    <span class="question-number">186</span>
+                    <h2 class="question-text">What is Email Engagement Rate?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans186">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Measures user interaction.</li>
+                        <li>Includes opens and clicks.</li>
+                        <li>Indicates campaign interest.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 187 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans187">
+                    <span class="question-number">187</span>
+                    <h2 class="question-text">What is Email Forward Rate?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans187">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Tracks email shares.</li>
+                        <li>Indicates content value.</li>
+                        <li>Expands audience reach.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 188 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans188">
+                    <span class="question-number">188</span>
+                    <h2 class="question-text">What is Email ROI?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans188">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Return on Investment from campaigns.</li>
+                        <li>Compares revenue vs cost.</li>
+                        <li>Measures profitability.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 189 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans189">
+                    <span class="question-number">189</span>
+                    <h2 class="question-text">What is Email Campaign Testing?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans189">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Testing email elements.</li>
+                        <li>Includes subject, design, CTA.</li>
+                        <li>Optimizes performance.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 190 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans190">
+                    <span class="question-number">190</span>
+                    <h2 class="question-text">What is Email Compliance?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans190">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Following email marketing laws.</li>
+                        <li>Includes GDPR and CAN-SPAM.</li>
+                        <li>Ensures legal sending practices.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 191 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans191">
+                    <span class="question-number">191</span>
+                    <h2 class="question-text">What is Email List Segmentation Strategy?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans191">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Dividing subscribers into groups.</li>
+                        <li>Based on behavior or demographics.</li>
+                        <li>Improves targeting accuracy.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 192 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans192">
+                    <span class="question-number">192</span>
+                    <h2 class="question-text">What is Email Marketing Funnel?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans192">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Customer journey via email.</li>
+                        <li>Awareness to conversion stages.</li>
+                        <li>Guides lead nurturing.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 193 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans193">
+                    <span class="question-number">193</span>
+                    <h2 class="question-text">What is Email Lifecycle Marketing?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans193">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Emails sent across customer stages.</li>
+                        <li>Includes onboarding and retention.</li>
+                        <li>Builds long-term relationships.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 194 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans194">
+                    <span class="question-number">194</span>
+                    <h2 class="question-text">What is Email Marketing Automation Workflow?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans194">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Predefined automated email paths.</li>
+                        <li>Triggered by user actions.</li>
+                        <li>Saves time and increases efficiency.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 195 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans195">
+                    <span class="question-number">195</span>
+                    <h2 class="question-text">What is Email Lead Nurturing?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans195">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Building relationships with leads.</li>
+                        <li>Using educational email content.</li>
+                        <li>Moves leads toward conversion.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 196 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans196">
+                    <span class="question-number">196</span>
+                    <h2 class="question-text">What is Email Content Strategy?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans196">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Planning email content types.</li>
+                        <li>Includes offers, education, updates.</li>
+                        <li>Aligns with marketing goals.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 197 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans197">
+                    <span class="question-number">197</span>
+                    <h2 class="question-text">What is Email Design Optimization?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans197">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Improving visual email layout.</li>
+                        <li>Focuses on readability and CTA.</li>
+                        <li>Enhances user engagement.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 198 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans198">
+                    <span class="question-number">198</span>
+                    <h2 class="question-text">What is Email Marketing KPI?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans198">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Key Performance Indicators.</li>
+                        <li>Measures campaign success.</li>
+                        <li>Includes opens, clicks, conversions.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 199 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans199">
+                    <span class="question-number">199</span>
+                    <h2 class="question-text">What is Email Marketing Dashboard?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans199">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Visual performance tracking panel.</li>
+                        <li>Displays campaign metrics.</li>
+                        <li>Helps data-driven decisions.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 200 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans200">
+                    <span class="question-number">200</span>
+                    <h2 class="question-text">What is AI in Email Marketing?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans200">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Uses artificial intelligence tools.</li>
+                        <li>Automates personalization and timing.</li>
+                        <li>Improves campaign performance.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="loan-footer px-2">
+        <div class="container">
+            <div class="row">
+
+                <!-- About Digital Marketing -->
+                <div class="col-md-4 col-sm-12 mb-4">
+                    <h5 class="fw-bold">Digital Marketing Guide</h5>
+
+                    <p class="pe-0 pe-md-3">
+                        A complete beginner-friendly guide for Digital Marketing.
+                        Learn SEO, Social Media Marketing, Email Marketing,
+                        Content Strategy, Paid Ads, and more—all in one place.
+                        Clear explanations and practical tips to help you grow online.
+                    </p>
+                </div>
+
+                <!-- Digital Marketing Topics -->
+                <div class="col-md-2 col-6 mb-4">
+                    <h5 class="fw-bold">Topics</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">SEO Basics</a></li>
+                        <li><a href="#">Social Media Marketing</a></li>
+                        <li><a href="#">Email Marketing</a></li>
+                        <li><a href="#">Content Strategy</a></li>
+                        <li><a href="#">Paid Advertising</a></li>
+                    </ul>
+                </div>
+
+                <!-- Tools & Techniques -->
+                <div class="col-md-2 col-6 mb-4">
+                    <h5 class="fw-bold">Tools & Techniques</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Google Ads</a></li>
+                        <li><a href="#">Facebook Ads</a></li>
+                        <li><a href="#">Analytics Tools</a></li>
+                        <li><a href="#">SEO Tools</a></li>
+                        <li><a href="#">Email Automation</a></li>
+                    </ul>
+                </div>
+
+                <!-- Learning Resources -->
+                <div class="col-md-2 col-6 mb-4">
+                    <h5 class="fw-bold">Learning Resources</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Blogs & Articles</a></li>
+                        <li><a href="#">Video Tutorials</a></li>
+                        <li><a href="#">E-books & PDFs</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                        <li><a href="#">Webinars</a></li>
+                    </ul>
+                </div>
+
+                <!-- Strategy & Tips -->
+                <div class="col-md-2 col-6 mb-4">
+                    <h5 class="fw-bold">Strategy & Tips</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Marketing Plans</a></li>
+                        <li><a href="#">Campaign Strategies</a></li>
+                        <li><a href="#">Lead Generation Tips</a></li>
+                        <li><a href="#">Conversion Optimization</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="footer-bottom text-center">
+                <p>
+                    <i class="fa-regular fa-copyright"></i>
+                    2026 Digital Marketing Guide. All rights reserved.
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="asset/js/script.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- Question & Answer JS-->
+    <script>
+        document.querySelectorAll('.question-header').forEach(header => {
+            header.addEventListener('click', () => {
+                header.classList.toggle('active');
+            });
+        });
+    </script>
+
+</body>
+
+</html>

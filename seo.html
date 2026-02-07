@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>React Interview Questions & Answers | Beginner to Advanced</title>
+
+    <meta name="description"
+        content="Prepare for React interviews with the latest React interview questions and answers. Covers beginner, intermediate, and advanced React concepts, hooks, components, state, props, and performance optimization." />
+
+    <meta name="keywords"
+        content="react interview questions, react js interview questions, react interview questions and answers, react hooks interview questions, react coding interview, frontend interview questions, javascript react interview" />
+
+    <meta name="author" content="React Interview Guide">
+    <meta name="robots" content="index, follow">
+
+    <!--My css-->
+    <link rel="stylesheet" href="asset/css/style.css">
+    <link rel="icon" href="assets/img/company-logo.png" type="image/png">
+
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+
+<body style="background-color: #323232;">
+
+    <!-- NavBar -->
+    <nav id="Navbar" class="navbar px-3 px-md-4 py-md-3">
+
+        <div class="website-name text-white">
+
+            <!-- Logo Icon -->
+            <div class="logo-img">
+                <i class="fa-solid fa-chart-line"></i> <!-- Digital Marketing icon -->
+            </div>
+
+            <!-- Website Title -->
+            <a href="index.html" style="text-decoration: none;">
+                <h2 class="logo-style ps-3">
+                    DIGITAL MARKETING GUIDE
+                </h2>
+            </a>
+
+        </div>
+
+        <!-- Menu Items -->
+        <div class="navbar-item">
+            <div class="navbar-menu pe-5">
+                <ul class="navbar-menu-links text-white">
+
+                    <a href="index.html">
+                        <li> Home </li>
+                    </a>
+
+                    <a href="seo.html">
+                        <li> SEO </li>
+                    </a>
+
+                    <a href="social-media.html">
+                        <li> Social Media Marketing </li>
+                    </a>
+
+                    <a href="email.html">
+                        <li> Email Marketing </li>
+                    </a>
+
+                    <a href="content.html">
+                        <li> Content Marketing </li>
+                    </a>
+
+                    <a href="tools.html">
+                        <li> Tools & Resources </li>
+                    </a>
+
+                </ul>
+            </div>
+        </div>
+
+        <!-- Mobile Toggle -->
+        <div class="navbar-menu-toggle" onclick="shownavbar()">
+            <i class="bi bi-list"></i>
+        </div>
+
+    </nav>
+
+    <!-- Side Navbar -->
+    <aside class="side-navbar">
+
+        <!-- Close Icon -->
+        <p class="cross-symbol" onclick="closenavbar()">
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </p>
+
+        <div class="side-navbar-links">
+
+            <!-- Home -->
+            <p class="side-navbar-link">
+                <i class="fas fa-home"></i>
+                <a href="index.html"> Home </a>
+            </p>
+
+            <!-- SEO -->
+            <p class="side-navbar-link">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <a href="seo.html"> SEO </a>
+            </p>
+
+            <!-- Social Media Marketing -->
+            <p class="side-navbar-link">
+                <i class="fa-brands fa-facebook"></i>
+                <a href="social-media.html"> Social Media Marketing </a>
+            </p>
+
+            <!-- Email Marketing -->
+            <p class="side-navbar-link">
+                <i class="fa-solid fa-envelope"></i>
+                <a href="email.html"> Email Marketing </a>
+            </p>
+
+            <!-- Content Marketing -->
+            <p class="side-navbar-link">
+                <i class="fa-solid fa-pen-nib"></i>
+                <a href="content.html"> Content Marketing </a>
+            </p>
+
+            <!-- Tools & Resources -->
+            <p class="side-navbar-link">
+                <i class="fa-solid fa-toolbox"></i>
+                <a href="tools.html"> Tools & Resources </a>
+            </p>
+
+        </div>
+
+    </aside>
+
+    <!-- Page Header -->
+    <section class="page-header px-3">
+        <div class="page-header-content">
+            <h4>SEO GUIDE FOR BEGINNERS</h4>
+            <h1>Learn SEO: Key Concepts, On-Page & Off-Page Strategies, and Tips</h1>
+        </div>
+    </section>
+
+    <!-- Question & Answer -->
+    <div class="react-interview-question">
+        <div class="container">
+
+            <h3 class="header-title">SEO Guide – Key Concepts, Tips & Best Practices</h3>
+
+            <!-- Question 51 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans51">
+                    <span class="question-number">51</span>
+                    <h2 class="question-text">What is SEO?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans51">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>SEO (Search Engine Optimization) is the process of improving a website's visibility on
+                            search engines like Google.</li>
+                        <li>Helps increase organic traffic without paid ads.</li>
+                        <li>Includes on-page SEO, off-page SEO, and technical SEO.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 52 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans52">
+                    <span class="question-number">52</span>
+                    <h2 class="question-text">What is On-Page SEO?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans52">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>On-page SEO involves optimizing content and HTML elements on your website.</li>
+                        <li>Includes meta titles, headings, URLs, content quality, and internal links.</li>
+                        <li>Helps search engines understand your page and rank it higher.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 53 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans53">
+                    <span class="question-number">53</span>
+                    <h2 class="question-text">What is Off-Page SEO?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans53">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Off-page SEO refers to actions taken outside your website to improve rankings.</li>
+                        <li>Includes backlinks, social media signals, and influencer mentions.</li>
+                        <li>Builds website authority and trustworthiness in the eyes of search engines.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 54 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans54">
+                    <span class="question-number">54</span>
+                    <h2 class="question-text">What are Meta Titles & Meta Descriptions?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans54">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Meta titles and descriptions are HTML elements that summarize a webpage for search engines
+                            and users.</li>
+                        <li>Titles appear as clickable headlines in search results.</li>
+                        <li>Descriptions provide a short summary to encourage clicks.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 55 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans55">
+                    <span class="question-number">55</span>
+                    <h2 class="question-text">What is a Backlink?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans55">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>A backlink is a link from another website pointing to your website.</li>
+                        <li>Helps improve domain authority and search rankings.</li>
+                        <li>High-quality backlinks from reputable sites are most valuable.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 56 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans56">
+                    <span class="question-number">56</span>
+                    <h2 class="question-text">What is Keyword Research?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans56">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Keyword research identifies the search terms people use to find content online.</li>
+                        <li>Helps create content that matches user intent and improves rankings.</li>
+                        <li>Tools: Google Keyword Planner, SEMrush, Ahrefs, Ubersuggest.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 57 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans57">
+                    <span class="question-number">57</span>
+                    <h2 class="question-text">What is a Long-Tail Keyword?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans57">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Long-tail keywords are longer, more specific search phrases.</li>
+                        <li>Usually have lower competition and higher conversion rates.</li>
+                        <li>Example: "Best beginner SEO tips for small businesses."</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 58 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans58">
+                    <span class="question-number">58</span>
+                    <h2 class="question-text">What is Technical SEO?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans58">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Technical SEO improves the website’s infrastructure for better crawling and indexing.</li>
+                        <li>Includes site speed, mobile-friendliness, XML sitemaps, and structured data.</li>
+                        <li>Helps search engines understand and rank your site more effectively.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 59 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans59">
+                    <span class="question-number">59</span>
+                    <h2 class="question-text">What is a Sitemap?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans59">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>A sitemap is a file listing all pages of your website for search engines.</li>
+                        <li>Makes it easier for search engines to crawl and index your pages.</li>
+                        <li>Can be XML or HTML format, submitted via Google Search Console.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 60 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans60">
+                    <span class="question-number">60</span>
+                    <h2 class="question-text">What is Duplicate Content?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans60">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Duplicate content is content that appears in more than one URL on the internet.</li>
+                        <li>Can harm search rankings as search engines don’t know which version to index.</li>
+                        <li>Always aim for unique and original content on your pages.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 61 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans61">
+                    <span class="question-number">61</span>
+                    <h2 class="question-text">What is a Robots.txt File?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans61">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>A robots.txt file tells search engines which pages to crawl or not crawl on your website.
+                        </li>
+                        <li>Helps prevent indexing of private or duplicate content.</li>
+                        <li>Placed in the root directory of your website.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 62 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans62">
+                    <span class="question-number">62</span>
+                    <h2 class="question-text">What is Domain Authority (DA)?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans62">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Domain Authority is a metric that predicts how well a website will rank on search engines.
+                        </li>
+                        <li>Score ranges from 0 to 100; higher is better.</li>
+                        <li>Influenced by backlinks, content quality, and website structure.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 63 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans63">
+                    <span class="question-number">63</span>
+                    <h2 class="question-text">What is Page Speed and Why is it Important?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans63">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Page speed measures how fast your web pages load.</li>
+                        <li>Fast-loading pages improve user experience and reduce bounce rate.</li>
+                        <li>Also a ranking factor for Google search results.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 64 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans64">
+                    <span class="question-number">64</span>
+                    <h2 class="question-text">What is Anchor Text?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans64">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Anchor text is the visible clickable text in a hyperlink.</li>
+                        <li>Helps search engines understand the topic of the linked page.</li>
+                        <li>Use descriptive and relevant keywords for better SEO.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 65 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans65">
+                    <span class="question-number">65</span>
+                    <h2 class="question-text">What is Mobile SEO?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans65">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Mobile SEO ensures your website works well on mobile devices.</li>
+                        <li>Includes responsive design, fast loading, and easy navigation.</li>
+                        <li>Google uses mobile-first indexing, so mobile optimization is crucial.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 66 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans66">
+                    <span class="question-number">66</span>
+                    <h2 class="question-text">What is Schema Markup?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans66">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Schema markup is code added to your website to help search engines understand your content.
+                        </li>
+                        <li>Can enhance search results with rich snippets like ratings, events, and product info.</li>
+                        <li>Makes your listing more attractive and clickable.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 67 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans67">
+                    <span class="question-number">67</span>
+                    <h2 class="question-text">What is Internal Linking?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans67">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Internal linking connects pages within your own website.</li>
+                        <li>Helps users navigate your site and discover related content.</li>
+                        <li>Distributes page authority and improves SEO performance.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 68 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans68">
+                    <span class="question-number">68</span>
+                    <h2 class="question-text">What is Canonical URL?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans68">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>A canonical URL tells search engines which version of a page is the original.</li>
+                        <li>Prevents duplicate content issues.</li>
+                        <li>Use the <code>rel="canonical"</code> tag in the HTML header.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 69 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans69">
+                    <span class="question-number">69</span>
+                    <h2 class="question-text">What is Bounce Rate?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans69">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Bounce rate is the percentage of visitors who leave a page without interacting.</li>
+                        <li>High bounce rate may indicate poor user experience or irrelevant content.</li>
+                        <li>Improving content, design, and page speed can reduce bounce rate.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 70 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans70">
+                    <span class="question-number">70</span>
+                    <h2 class="question-text">What is Google Search Console?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans70">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Google Search Console is a free tool to monitor and maintain your website’s presence in
+                            Google search results.</li>
+                        <li>Helps track clicks, impressions, rankings, and index status.</li>
+                        <li>Provides alerts for issues like crawl errors, manual penalties, and mobile usability.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 71 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans71">
+                    <span class="question-number">71</span>
+                    <h2 class="question-text">What is Alt Text in SEO?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans71">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Alt text is a description of an image used in HTML <code>alt</code> attribute.</li>
+                        <li>Helps search engines understand images and improves accessibility.</li>
+                        <li>Include relevant keywords naturally without keyword stuffing.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 72 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans72">
+                    <span class="question-number">72</span>
+                    <h2 class="question-text">What is HTTPS and Why is it Important?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans72">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>HTTPS is the secure version of HTTP using SSL/TLS encryption.</li>
+                        <li>Protects user data and improves website trustworthiness.</li>
+                        <li>HTTPS is also a ranking factor in Google search results.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 73 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans73">
+                    <span class="question-number">73</span>
+                    <h2 class="question-text">What is a 301 Redirect?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans73">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>A 301 redirect permanently redirects one URL to another.</li>
+                        <li>Helps preserve SEO value and link equity from the old URL.</li>
+                        <li>Used when pages are removed, replaced, or moved.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 74 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans74">
+                    <span class="question-number">74</span>
+                    <h2 class="question-text">What is Keyword Density?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans74">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Keyword density is the percentage of times a keyword appears in a page compared to total
+                            words.</li>
+                        <li>Helps search engines understand topic relevance.</li>
+                        <li>Overusing keywords (keyword stuffing) can hurt SEO.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 75 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans75">
+                    <span class="question-number">75</span>
+                    <h2 class="question-text">What is a Featured Snippet?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans75">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>A featured snippet is a highlighted answer displayed at the top of Google search results.
+                        </li>
+                        <li>Can include text, lists, tables, or videos.</li>
+                        <li>Optimizing content for featured snippets can increase traffic and visibility.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 76 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans76">
+                    <span class="question-number">76</span>
+                    <h2 class="question-text">What is a NoIndex Tag?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans76">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>A NoIndex tag tells search engines not to index a specific page.</li>
+                        <li>Useful for duplicate, private, or low-value pages.</li>
+                        <li>Added in the HTML <code>&lt;meta name="robots" content="noindex"&gt;</code> tag.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 77 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans77">
+                    <span class="question-number">77</span>
+                    <h2 class="question-text">What is a Keyword Cannibalization?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans77">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Keyword cannibalization occurs when multiple pages target the same keyword.</li>
+                        <li>Search engines get confused and may rank both pages lower.</li>
+                        <li>Resolve by consolidating content or using canonical URLs.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 78 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans78">
+                    <span class="question-number">78</span>
+                    <h2 class="question-text">What is Link Building?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans78">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Link building is the process of acquiring backlinks from other websites.</li>
+                        <li>Helps improve domain authority and search rankings.</li>
+                        <li>Focus on high-quality, relevant, and natural backlinks.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 79 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans79">
+                    <span class="question-number">79</span>
+                    <h2 class="question-text">What is a Canonical Issue?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans79">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>A canonical issue occurs when multiple URLs have the same content without proper canonical
+                            tags.</li>
+                        <li>Can cause duplicate content problems and affect rankings.</li>
+                        <li>Fix by setting the <code>rel="canonical"</code> tag to the preferred URL.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 80 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans80">
+                    <span class="question-number">80</span>
+                    <h2 class="question-text">What is Organic Traffic?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans80">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Organic traffic refers to visitors who come to your website through unpaid search results.
+                        </li>
+                        <li>It is considered high-quality traffic because users are actively searching for your content.
+                        </li>
+                        <li>SEO strategies aim to increase organic traffic over time.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 81 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans81">
+                    <span class="question-number">81</span>
+                    <h2 class="question-text">What is a Content Audit?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans81">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>A content audit is the process of analyzing all website content for quality, relevance, and
+                            SEO performance.</li>
+                        <li>Helps identify outdated, duplicate, or underperforming pages.</li>
+                        <li>Used to improve content strategy and optimize rankings.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 82 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans82">
+                    <span class="question-number">82</span>
+                    <h2 class="question-text">What is User Experience (UX) in SEO?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans82">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>User Experience (UX) is how easily and efficiently users interact with your website.</li>
+                        <li>Good UX improves engagement, reduces bounce rate, and positively affects SEO.</li>
+                        <li>Includes page speed, navigation, design, readability, and mobile-friendliness.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 83 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans83">
+                    <span class="question-number">83</span>
+                    <h2 class="question-text">What is CTR (Click-Through Rate)?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans83">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>CTR is the percentage of users who click your link in search results.</li>
+                        <li>Higher CTR indicates your title and meta description attract users effectively.</li>
+                        <li>Optimizing meta titles, descriptions, and snippets can improve CTR.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 84 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans84">
+                    <span class="question-number">84</span>
+                    <h2 class="question-text">What is a SEO Audit?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans84">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>An SEO audit evaluates your website’s SEO health and performance.</li>
+                        <li>Checks for on-page, off-page, technical, and content issues.</li>
+                        <li>Helps create an actionable strategy to improve rankings and traffic.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 85 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans85">
+                    <span class="question-number">85</span>
+                    <h2 class="question-text">What is Local SEO?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans85">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Local SEO optimizes a website to rank for location-based searches.</li>
+                        <li>Includes Google Business Profile, local citations, and reviews.</li>
+                        <li>Helps businesses attract nearby customers and drive foot traffic.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 86 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans86">
+                    <span class="question-number">86</span>
+                    <h2 class="question-text">What is an XML Sitemap?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans86">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>An XML sitemap is a structured list of your website URLs for search engines.</li>
+                        <li>Helps search engines crawl and index pages efficiently.</li>
+                        <li>Can include metadata like last update, priority, and frequency of changes.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 87 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans87">
+                    <span class="question-number">87</span>
+                    <h2 class="question-text">What is a Link Juice?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans87">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Link juice refers to the SEO value passed from one page to another via backlinks.</li>
+                        <li>High-quality backlinks pass more link juice, improving rankings.</li>
+                        <li>Internal linking also distributes link juice within your own site.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 88 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans88">
+                    <span class="question-number">88</span>
+                    <h2 class="question-text">What is a Featured Image in SEO?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans88">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>A featured image is the main image representing a webpage or blog post.</li>
+                        <li>Helps improve user engagement and social sharing.</li>
+                        <li>Optimize with relevant alt text and size for better SEO performance.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 89 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans89">
+                    <span class="question-number">89</span>
+                    <h2 class="question-text">What is Google Analytics?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans89">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Google Analytics is a free tool to track website traffic, user behavior, and conversions.
+                        </li>
+                        <li>Helps analyze SEO performance and marketing effectiveness.</li>
+                        <li>Provides data like sessions, page views, bounce rate, and user demographics.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 90 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans90">
+                    <span class="question-number">90</span>
+                    <h2 class="question-text">What is SEO-Friendly URL?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans90">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>SEO-friendly URLs are short, readable, and include relevant keywords.</li>
+                        <li>They help search engines and users understand the page content.</li>
+                        <li>Avoid special characters, numbers, or long strings in URLs.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 91 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans91">
+                    <span class="question-number">91</span>
+                    <h2 class="question-text">What is Duplicate Content in SEO?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans91">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Duplicate content refers to identical or very similar content appearing on multiple URLs.
+                        </li>
+                        <li>Can confuse search engines and reduce ranking potential.</li>
+                        <li>Fix with canonical tags, 301 redirects, or rewriting content.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 92 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans92">
+                    <span class="question-number">92</span>
+                    <h2 class="question-text">What is Structured Data in SEO?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans92">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Structured data is a standardized format to provide information about a page’s content.</li>
+                        <li>Helps search engines understand content type and display rich results.</li>
+                        <li>Implemented using schema.org markup or JSON-LD code.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 93 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans93">
+                    <span class="question-number">93</span>
+                    <h2 class="question-text">What is a Backlink?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans93">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>A backlink is a link from another website pointing to your website.</li>
+                        <li>High-quality backlinks improve authority and search engine ranking.</li>
+                        <li>Avoid low-quality or spammy links as they can hurt SEO.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 94 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans94">
+                    <span class="question-number">94</span>
+                    <h2 class="question-text">What is Organic Search?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans94">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Organic search refers to non-paid traffic coming from search engines.</li>
+                        <li>Generated by optimizing content, keywords, and SEO strategies.</li>
+                        <li>Organic traffic is long-term and sustainable compared to paid traffic.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 95 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans95">
+                    <span class="question-number">95</span>
+                    <h2 class="question-text">What is Thin Content?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans95">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Thin content refers to pages with very little or low-value content.</li>
+                        <li>Does not provide sufficient information to users or search engines.</li>
+                        <li>Can harm rankings; improve by adding detailed, quality content.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 96 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans96">
+                    <span class="question-number">96</span>
+                    <h2 class="question-text">What is Search Engine Crawling?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans96">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Crawling is the process by which search engines discover new or updated pages on your
+                            website.</li>
+                        <li>Search engines use bots (crawlers) to scan content and links.</li>
+                        <li>Proper website structure and sitemaps help crawlers index pages efficiently.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 97 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans97">
+                    <span class="question-number">97</span>
+                    <h2 class="question-text">What is Meta Description?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans97">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Meta description is a brief summary of a page’s content in the HTML header.</li>
+                        <li>Displayed in search results under the page title.</li>
+                        <li>Optimize with relevant keywords to improve CTR and attract users.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 98 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans98">
+                    <span class="question-number">98</span>
+                    <h2 class="question-text">What is Black Hat SEO?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans98">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>Black Hat SEO uses unethical techniques to manipulate search engine rankings.</li>
+                        <li>Examples include keyword stuffing, hidden text, and spammy backlinks.</li>
+                        <li>May lead to penalties or de-indexing by search engines.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 99 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans99">
+                    <span class="question-number">99</span>
+                    <h2 class="question-text">What is White Hat SEO?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans99">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>White Hat SEO uses ethical and approved strategies to improve rankings.</li>
+                        <li>Focuses on quality content, proper keywords, and user experience.</li>
+                        <li>Safe and sustainable method for long-term SEO success.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 100 -->
+            <div class="question-card">
+                <div class="question-header" data-bs-toggle="collapse" data-bs-target="#ans100">
+                    <span class="question-number">100</span>
+                    <h2 class="question-text">What is SEO ROI?</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="answer-body collapse" id="ans100">
+                    <p><strong>Answer:</strong></p>
+                    <ul>
+                        <li>SEO ROI measures the return on investment from SEO activities.</li>
+                        <li>Calculates revenue, leads, or conversions generated compared to the cost of SEO efforts.
+                        </li>
+                        <li>Helps businesses understand SEO effectiveness and profitability.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="loan-footer px-2">
+        <div class="container">
+            <div class="row">
+
+                <!-- About Digital Marketing -->
+                <div class="col-md-4 col-sm-12 mb-4">
+                    <h5 class="fw-bold">Digital Marketing Guide</h5>
+
+                    <p class="pe-0 pe-md-3">
+                        A complete beginner-friendly guide for Digital Marketing.
+                        Learn SEO, Social Media Marketing, Email Marketing,
+                        Content Strategy, Paid Ads, and more—all in one place.
+                        Clear explanations and practical tips to help you grow online.
+                    </p>
+                </div>
+
+                <!-- Digital Marketing Topics -->
+                <div class="col-md-2 col-6 mb-4">
+                    <h5 class="fw-bold">Topics</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">SEO Basics</a></li>
+                        <li><a href="#">Social Media Marketing</a></li>
+                        <li><a href="#">Email Marketing</a></li>
+                        <li><a href="#">Content Strategy</a></li>
+                        <li><a href="#">Paid Advertising</a></li>
+                    </ul>
+                </div>
+
+                <!-- Tools & Techniques -->
+                <div class="col-md-2 col-6 mb-4">
+                    <h5 class="fw-bold">Tools & Techniques</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Google Ads</a></li>
+                        <li><a href="#">Facebook Ads</a></li>
+                        <li><a href="#">Analytics Tools</a></li>
+                        <li><a href="#">SEO Tools</a></li>
+                        <li><a href="#">Email Automation</a></li>
+                    </ul>
+                </div>
+
+                <!-- Learning Resources -->
+                <div class="col-md-2 col-6 mb-4">
+                    <h5 class="fw-bold">Learning Resources</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Blogs & Articles</a></li>
+                        <li><a href="#">Video Tutorials</a></li>
+                        <li><a href="#">E-books & PDFs</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                        <li><a href="#">Webinars</a></li>
+                    </ul>
+                </div>
+
+                <!-- Strategy & Tips -->
+                <div class="col-md-2 col-6 mb-4">
+                    <h5 class="fw-bold">Strategy & Tips</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Marketing Plans</a></li>
+                        <li><a href="#">Campaign Strategies</a></li>
+                        <li><a href="#">Lead Generation Tips</a></li>
+                        <li><a href="#">Conversion Optimization</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="footer-bottom text-center">
+                <p>
+                    <i class="fa-regular fa-copyright"></i>
+                    2026 Digital Marketing Guide. All rights reserved.
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="asset/js/script.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- Question & Answer JS-->
+    <script>
+        document.querySelectorAll('.question-header').forEach(header => {
+            header.addEventListener('click', () => {
+                header.classList.toggle('active');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
